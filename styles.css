@@ -30,6 +30,10 @@
     #projects > div[data-project-grid]{grid-template-columns:1fr!important;}
     #skills > div[data-skills-grid]{grid-template-columns:1fr!important;}
     [data-timeline-row]{grid-template-columns:100px 1fr!important;gap:14px!important;}
+    .u24{display: flex;
+        justify-content: center;
+        align-items: center;
+      }
   }
 
 /* Styles converted from the original inline layout */
