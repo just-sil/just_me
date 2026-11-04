@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("year").textContent = new Date().getFullYear();
+  const yearElement = document.getElementById("year");
+  if (yearElement) yearElement.textContent = new Date().getFullYear();
 
   // Hero entrance animation
   document.querySelectorAll("#cv-root [data-hero]").forEach((el, i) => {
