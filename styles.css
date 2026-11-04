@@ -50,6 +50,18 @@
   --project-card-hover-border:var(--accent);
   --project-card-transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease,border-color .35s ease;
 
+  /* Achievement badge typography: one set of values for every lime award badge */
+  --achievement-badge-font:var(--font-mono);
+  --achievement-badge-size:11px;
+  --achievement-badge-weight:400;
+  --achievement-badge-line-height:1.4;
+  --achievement-badge-letter-spacing:0;
+  --achievement-badge-padding:4px 11px;
+  --achievement-badge-radius:4px;
+  --achievement-badge-border:1px solid var(--project-badge-bg);
+  --achievement-badge-background:var(--project-badge-bg);
+  --achievement-badge-color:var(--project-badge-color);
+
   /* Project badges and tags */
   --project-badge-bg:var(--accent);
   --project-badge-color:var(--accent-ink);
@@ -540,15 +552,36 @@ a:hover{color:var(--accent-hover);}
   color:var(--fg);
 }
 
-/* Award / status badges */
-.u76,.u87,.u98,.u219,.u226,.u233{
+/* Project-card award badges */
+.u76,.u87,.u98{
   background:var(--project-badge-bg);
   color:var(--project-badge-color);
   border-color:var(--project-badge-bg);
   border-radius:var(--project-badge-radius);
   font-weight:var(--weight-label);
 }
-.u210,.u301{color:var(--accent-ink);border-radius:var(--project-badge-radius);}
+
+/* Achievement timeline: every lime badge shares identical typography and spacing.
+   Change the --achievement-badge-* tokens above to update all four together. */
+.u210,.u219,.u226,.u233{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  box-sizing:border-box;
+  font-family:var(--achievement-badge-font);
+  font-size:var(--achievement-badge-size);
+  font-weight:var(--achievement-badge-weight);
+  line-height:var(--achievement-badge-line-height);
+  letter-spacing:var(--achievement-badge-letter-spacing);
+  padding:var(--achievement-badge-padding);
+  border:var(--achievement-badge-border);
+  border-radius:var(--achievement-badge-radius);
+  background:var(--achievement-badge-background);
+  color:var(--achievement-badge-color);
+  white-space:nowrap;
+  vertical-align:middle;
+}
+.u301{color:var(--accent-ink);border-radius:var(--project-badge-radius);}
 
 /* Tags */
 .u80,.u81,.u82,.u83,.u91,.u92,.u93,.u94,.u102,.u103,.u104{
