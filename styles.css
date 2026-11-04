@@ -49,6 +49,11 @@
   --project-card-hover-lift:-4px;
   --project-card-hover-border:var(--accent);
   --project-card-transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease,border-color .35s ease;
+  --project-extra-meta-size:11px;
+  --project-extra-status-padding:4px 10px;
+  --project-extra-status-radius:4px;
+  --project-extra-link-color:var(--accent-hover);
+  --project-extra-link-weight:600;
 
   /* Achievement badge typography: one set of values for every lime award badge */
   --achievement-badge-font:var(--font-mono);
@@ -590,6 +595,85 @@ footer{border-top:1px solid var(--line);}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto;}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important;}
+}
+
+
+/* Additional project cards use the same shared card and typography tokens. */
+#projects .project-card__header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:18px;
+}
+#projects .project-card__id{
+  color:var(--muted);
+  font-family:var(--font-mono);
+  font-size:12px;
+}
+#projects .project-card__status{
+  display:inline-flex;
+  align-items:center;
+  padding:var(--project-extra-status-padding);
+  border-radius:var(--project-extra-status-radius);
+  background:var(--project-badge-bg);
+  color:var(--project-badge-color);
+  font-family:var(--font-mono);
+  font-size:var(--project-extra-meta-size);
+  font-weight:var(--weight-label);
+  line-height:1.4;
+  letter-spacing:.02em;
+}
+#projects .project-card__description{
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.6;
+  margin:0 0 18px;
+  max-width:66ch;
+}
+#projects .project-card__description code{
+  font-family:var(--font-mono);
+  font-size:.88em;
+  color:var(--fg);
+  background:var(--bg2);
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:1px 4px;
+}
+#projects .project-card__tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+#projects .project-card__tag{
+  display:inline-flex;
+  align-items:center;
+  border:1px solid var(--project-tag-border);
+  border-radius:var(--project-tag-radius);
+  background:var(--project-tag-bg);
+  color:var(--fg);
+  padding:5px 11px;
+  font-family:var(--font-mono);
+  font-size:11px;
+  line-height:1.4;
+}
+#projects .project-card__link{
+  display:inline-flex;
+  align-items:center;
+  margin-top:16px;
+  color:var(--project-extra-link-color);
+  font-size:14px;
+  font-weight:var(--project-extra-link-weight);
+  text-decoration:underline;
+  text-decoration-color:var(--accent);
+  text-decoration-thickness:1px;
+  text-underline-offset:4px;
+  transition:color .2s ease,text-decoration-color .2s ease;
+}
+#projects .project-card__link:hover{
+  color:var(--fg);
+  text-decoration-color:var(--fg);
 }
 
 /* Keyboard accessibility */
