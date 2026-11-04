@@ -1,111 +1,105 @@
-# Mohamed Simal M — Portfolio
+<div align="center">
 
-A personal portfolio and online CV showcasing my work across software, electronics, embedded systems, IoT, robotics, and creative technology.
+# Mohamed Simal M
 
-The site is built as a lightweight static website with plain HTML, CSS, and JavaScript. It does not require a framework, package manager, build step, or backend.
+**Developer · Electronics Enthusiast · Maker · Photographer**
 
-## Features
+*I like building things where code meets the physical world.*
 
-- **Introduction and profile** — a short introduction, profile photo, and links to work and contact details.
-- **Project gallery** — selected software, electronics, and engineering projects, with descriptions and technology tags.
-- **Experience and recognition** — innovation programmes, competitions, and achievements.
-- **Skills and technical interests** — a concise overview of working approaches, tools, and areas of interest.
-- **Education timeline** — current B.Tech studies in Computer Science and Business Systems at Model Engineering College, Thrikkakara, alongside completed higher-secondary education.
-- **Contact links** — email, GitHub, and WhatsApp.
-- **Responsive layout** — adapts to desktop and mobile screen sizes.
-- **Motion details** — entrance/reveal animations, a scrolling progress indicator, and a technical marquee.
-- **Reduced-motion support** — respects the browser's `prefers-reduced-motion` setting.
-- **Centralized design tokens** — key colors, typography, spacing, card styles, and badge styles can be adjusted from the variables near the top of `styles.css`.
+[Portfolio](https://just-sil.github.io/just_me/) · [GitHub](https://github.com/just-sil) · [Instagram](https://www.instagram.com/silman0_0/) · [Email](mailto:simalmannekkara@gmail.com)
 
-## Tech stack
+</div>
 
-| Technology | Purpose |
+---
+
+## About
+
+I'm Mohamed Simal M, a Computer Science and Business Systems student at **Model Engineering College, Thrikkakara**, from **Tirur, Malappuram, Kerala**.
+
+I'm curious about how software interacts with the physical world. I enjoy experimenting with electronics, writing code, building prototypes, and turning practical ideas into working projects. My interests span embedded systems, IoT, robotics, AI, Linux, computer vision, 3D printing, and photography.
+
+I learn best by making things, testing them, breaking them, and improving them.
+
+## Education
+
+**B.Tech — Computer Science and Business Systems**  
+Model Engineering College, Thrikkakara · *Currently studying*
+
+**Higher Secondary — Science**  
+Class 12 · **95%**
+
+## Featured Projects
+
+### CodeRoof — Interactive Learn-to-Code Platform
+
+Built independently with vanilla HTML, CSS, and JavaScript. CodeRoof contains 24 lessons across Programming Basics and Vibe Coding & Prompt Engineering, with browser-based auto-graded exercises, a simulated Bash/Git terminal, a virtual file system, and Python execution through Pyodide (WebAssembly).
+
+[Try CodeRoof](https://just-sil.github.io/code_roof/)
+
+### MOT — Medicine On Time
+
+A healthcare-robot concept designed to help elderly people take medicine on schedule. It combines reminders with automated medicine restocking. The project was recognised as a **state-level winner in the Young Innovators Programme (YIP)**.
+
+### EasyRation
+
+A digital ration-management concept for the Public Distribution System (PDS). RFID is used to identify beneficiaries, load sensors measure dispensed quantities, and a mobile app supports transparent tracking. Presented at state-level innovation and science-fair platforms.
+
+### Yocto Linux on i.MX7D Pico
+
+An embedded Linux board-bring-up project using the Yocto Project, working from the bootloader stage toward a custom Linux image on an i.MX7D Pico board.
+
+### Kaida — Pocket AI Assistant
+
+A portable, voice-enabled AI assistant concept intended to interact naturally and control a connected smart room.
+
+### AI Smart Farming System
+
+An AI-assisted precision-agriculture concept focused on environmental monitoring, automation, and data-informed crop management.
+
+## More Projects & Experiments
+
+- **Smart Room Automation** — ESP32/ESP8266-based lighting and appliance control with IoT connectivity.
+- **PrintDaddy** — an on-demand 3D-printing service platform; currently in development.
+- **Automated Solar Panel Cleaning** — a motorised cleaning mechanism intended to reduce manual maintenance.
+- **RTSP CCTV Monitoring** — multi-camera IP video monitoring using Python, VLC, and RTSP streams.
+- **Contactless Attendance System** — a face-recognition attendance prototype using Python and OpenCV.
+- **KEAM Rank Analyzer** — a Python/Flask tool for analysing response sheets and calculating scores.
+- **RankRack** — a student marks and ranking platform.
+- **3D Printing & Prototyping** — functional prints and prototype work using an Anycubic Kobra 2 Neo.
+
+## Recognition & Achievements
+
+- **Young Innovators Programme (YIP):** Reached the state level twice; MOT — Medicine On Time received state-level winner recognition.
+- **INSPIRE Awards — MANAK:** Selected to the state level with EasyRation.
+- **Kerala School Science Fair (2024–25):** Reached the state level presenting EasyRation.
+- **TinkerHub Code-a-Pookalam:** Winner in the School Students category.
+
+## Skills & Tools
+
+| Area | Technologies and interests |
 |---|---|
-| HTML5 | Page structure and content |
-| CSS3 | Layout, responsive styling, animations, and design tokens |
-| Vanilla JavaScript | Scroll progress, entrance effects, and scroll-triggered reveals |
-| Google Fonts | Hanken Grotesk, Instrument Serif, and Space Mono |
+| Programming & Web | Python, JavaScript, HTML, CSS, Flask |
+| Embedded & IoT | Arduino, ESP32, ESP8266, Raspberry Pi, sensors and actuators |
+| Electronics | Circuit design, prototyping, robotics and automation |
+| Systems | Linux, Yocto Project, open-source tools |
+| Applied Computing | Computer vision, AI experiments, WebAssembly / Pyodide |
+| Making | 3D printing, CAD-based prototyping |
 
-The JavaScript uses browser APIs such as `IntersectionObserver` and does not depend on third-party JavaScript libraries.
+## What I'm Exploring
 
-## Project structure
+I'm interested in the overlap between embedded systems, connected devices, useful automation, AI, and creative software. I also enjoy photography and exploring how visual ideas can complement technical work.
 
-```text
-.
-├── index.html   # Main page and portfolio content
-├── styles.css   # Design system, layout, responsive rules, and animations
-├── script.js    # Small interaction and animation behaviours
-├── me.jpg       # Profile photograph
-└── README.md    # Project documentation
-```
+## Get in Touch
 
-Keep these files together in the same directory. The page loads `styles.css`, `script.js`, and `me.jpg` using relative paths.
+- **Email:** [simalmannekkara@gmail.com](mailto:simalmannekkara@gmail.com)
+- **GitHub:** [github.com/just-sil](https://github.com/just-sil)
+- **Portfolio:** [just-sil.github.io/just_me](https://just-sil.github.io/just_me/)
+- **Instagram:** [@silman0_0](https://www.instagram.com/silman0_0/)
 
-## Run locally
+---
 
-No installation is needed. You only need a modern web browser and (recommended) Python 3 for a local development server.
+<div align="center">
 
-1. Download or clone this repository.
-2. Open a terminal in the project directory.
-3. Start a local server:
+*Curiosity gets me started. Building helps me learn.*
 
-   ```bash
-   python3 -m http.server 8000
-   ```
-
-4. Open [http://localhost:8000](http://localhost:8000) in your browser.
-5. Stop the server with `Ctrl+C` in the terminal.
-
-You can also open `index.html` directly in a browser, but using a local server is recommended for more consistent behaviour.
-
-## Customize the portfolio
-
-### Update the content
-
-Edit `index.html` to change the introduction, project descriptions, achievement details, skills, education, and contact links. Keep the existing section IDs (such as `projects`, `experience`, `skills`, `education`, and `contact`) if you want the navigation links and in-page buttons to continue working.
-
-### Change the design
-
-Open `styles.css` and edit the `:root` design tokens near the beginning of the file. These variables control shared values such as:
-
-- Core palette: `--bg`, `--bg2`, `--fg`, `--muted`, `--line`, and `--accent`.
-- Fonts: `--font-body`, `--font-heading`, `--font-display`, and `--font-mono`.
-- Project title appearance: `--project-title-size`, `--project-title-weight`, and `--project-title-letter-spacing`.
-- Project card appearance: `--project-card-radius`, `--project-card-padding`, and hover tokens.
-- Achievement badge typography and spacing.
-- Education entry spacing: `--education-entry-gap`.
-
-Prefer changing a shared variable over adding another one-off selector. This keeps related components visually consistent.
-
-### Replace the profile photo
-
-Replace `me.jpg` with your own image, keeping the same filename. Alternatively, update the image's `src` in `index.html` to match the new filename. The image is displayed as a cropped profile photo.
-
-### Update external links
-
-Search in `index.html` for the email, GitHub, WhatsApp, and project URLs. Replace them with your own verified destinations. Avoid adding links to repositories or demos that are not public or ready to share.
-
-## Deploy
-
-This is a static site, so it can be hosted on any static web host. No server-side runtime or database is required.
-
-### GitHub Pages
-
-1. Push the project files (`index.html`, `styles.css`, `script.js`, and `me.jpg`) to a GitHub repository.
-2. Open the repository's **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select the branch containing the site and the repository root (`/`) as the folder.
-5. Save and open the published URL shown by GitHub Pages.
-
-The root `index.html` is the site entry point. When updating the site, commit and push the changed files to the selected branch.
-
-## Notes
-
-- Google Fonts are loaded from Google Fonts, so the selected typefaces require an internet connection. System fallbacks are defined in the CSS.
-- The portfolio is intentionally framework-free. There is no `npm install`, `npm run build`, or package configuration to maintain.
-- Check the page at both desktop and mobile widths after making substantial content or layout changes.
-- Keep image filenames and relative paths in sync when adding or replacing assets.
-
-## License
-
-No license is currently specified. Add a `LICENSE` file before permitting reuse, redistribution, or modification by others.
+</div>
