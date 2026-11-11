@@ -1,4 +1,4 @@
-// Page interactions. The 3D board lives in board.js and is loaded lazily below.
+// Page interactions. The 3D toys in the hero live in toys.js and load lazily below.
 
 const root = document.documentElement;
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -12,14 +12,8 @@ const smooth = (a, b, v) => {
   return t * t * (3 - 2 * t);
 };
 
-// Shared with board.js: where the page is, so the board knows what to do.
-const state = {
-  blend: 0, // 0 = hero pose, 1 = toolkit pose
-  explode: 0, // 0 = assembled, 1 = fully taken apart
-  step: -1, // highlighted toolkit step, -1 = none
-  pointerX: 0,
-  pointerY: 0
-};
+// Shared with toys.js.
+const state = { pointerX: 0, pointerY: 0, heroScroll: 0 };
 
 window.__booted = true;
 
@@ -34,25 +28,6 @@ if (clockEl) {
   tick();
   setInterval(tick, 20000);
 }
-
-/* ── theme ────────────────────────────────────────────────── */
-const themeBtn = $("#theme-toggle");
-const themeMeta = $('meta[name="theme-color"]');
-const applyTheme = (theme) => {
-  root.setAttribute("data-theme", theme);
-  if (themeMeta) themeMeta.setAttribute("content", theme === "light" ? "#F1F2EC" : "#0A0F0C");
-  if (themeBtn) themeBtn.setAttribute("aria-label", `Switch to ${theme === "light" ? "dark" : "light"} theme`);
-};
-applyTheme(root.getAttribute("data-theme") === "light" ? "light" : "dark");
-themeBtn?.addEventListener("click", () => {
-  const next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
-  applyTheme(next);
-  try {
-    localStorage.setItem("theme", next);
-  } catch (e) {
-    /* storage unavailable: the choice just won't persist */
-  }
-});
 
 /* ── hero entrance ────────────────────────────────────────── */
 $$("[data-hero]").forEach((el, i) => el.style.setProperty("--i", i));
@@ -93,39 +68,6 @@ const updateNav = () => {
     if (current && a.getAttribute("href") === `#${current.id}`) a.setAttribute("aria-current", "true");
     else a.removeAttribute("aria-current");
   });
-};
-
-/* ── toolkit: scroll position → board state ───────────────── */
-const kit = $("#toolkit");
-const kitSteps = $$(".kit__step");
-const kitCount = $("#kit-count");
-let shownStep = 0;
-
-const updateKit = () => {
-  if (!kit || !root.classList.contains("has-3d")) {
-    state.blend = 0;
-    state.explode = 0;
-    state.step = -1;
-    return;
-  }
-  const r = kit.getBoundingClientRect();
-  const vh = window.innerHeight;
-  const travel = Math.max(1, r.height - vh);
-  const p = clamp(-r.top / travel);
-
-  state.blend = smooth(0, 1, 1 - r.top / vh);
-  // come apart on the way in, snap back together on the way out
-  state.explode = smooth(0.0, 0.13, p) * (1 - smooth(0.94, 1, p));
-
-  const n = kitSteps.length;
-  const idx = Math.min(n - 1, Math.floor(clamp((p - 0.1) / 0.83) * n));
-  state.step = p > 0.07 && p < 0.95 && r.bottom > vh * 0.5 ? idx : -1;
-
-  if (idx !== shownStep) {
-    shownStep = idx;
-    kitSteps.forEach((el, i) => el.classList.toggle("is-active", i === idx));
-    if (kitCount) kitCount.textContent = idx + 1;
-  }
 };
 
 /* ── quote: words light up as it crosses the screen ───────── */
@@ -171,7 +113,7 @@ const onScroll = () => {
   scrollQueued = false;
   const max = root.scrollHeight - root.clientHeight;
   if (progressBar) progressBar.style.transform = `scaleX(${max > 0 ? root.scrollTop / max : 0})`;
-  updateKit();
+  state.heroScroll = window.scrollY;
   updateQuote();
   updateNav();
 };
@@ -184,7 +126,7 @@ window.addEventListener("scroll", queueScroll, { passive: true });
 window.addEventListener("resize", queueScroll);
 onScroll();
 
-/* ── pointer: parallax for the board, tilt for cards ──────── */
+/* ── pointer: tilt for cards ──────────────────────────────── */
 if (finePointer && !reducedMotion) {
   window.addEventListener(
     "pointermove",
@@ -295,27 +237,23 @@ if (term && !reducedMotion && "IntersectionObserver" in window) {
   ).observe(term);
 }
 
-/* ── 3D board ─────────────────────────────────────────────── */
+/* ── 3D toys in the hero ─────────────────────────────────── */
 if (root.classList.contains("has-3d")) {
   const start = () =>
-    import("./board.js")
-      .then(({ initBoard }) =>
-        initBoard({
-          canvas: $("#scene"),
-          heroStage: $("#stage-hero"),
-          kitStage: $("#stage-kit"),
-          callout: $("#callout"),
-          labels: kitSteps.map((el) => el.dataset.callout || ""),
+    import("./toys.js")
+      .then(({ initToys }) =>
+        initToys({
+          canvas: $("#toys"),
+          hero: $("#top"),
+          stage: $("#stage-hero"),
           state,
           reducedMotion
         })
       )
       .then(() => root.classList.add("scene-ready"))
       .catch((err) => {
-        // No WebGL after all: fall back to the plain, unpinned layout.
-        console.warn("3D board unavailable:", err);
+        console.warn("3D toys unavailable:", err);
         root.classList.remove("has-3d", "scene-ready");
-        onScroll();
       });
   if (document.readyState === "complete") start();
   else window.addEventListener("load", start, { once: true });

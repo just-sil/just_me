@@ -94,10 +94,10 @@ I'm interested in the overlap between embedded systems, connected devices, usefu
 The portfolio is plain HTML, CSS and JavaScript with no build step.
 
 - `index.html` — all content.
-- `styles.css` — design tokens at the top (colours, fonts, spacing), dark and light themes.
-- `script.js` — scroll reveals, theme toggle, project filters and card tilt.
-- `board.js` — the 3D dev board in the hero. It is modelled in code with [three.js](https://threejs.org/) (no model files) and comes apart as you scroll through the Toolkit section.
-- `vendor/` — three.js r170, bundled locally so the site has no CDN dependency.
+- `styles.css` — design tokens at the top (colours, fonts, outlines, shadows).
+- `script.js` — scroll reveals, project filters, card tilt and the typed terminal.
+- `toys.js` — the 3D toy robot and floating shapes in the hero, built from primitives with [three.js](https://threejs.org/) (no model files). Poke the robot or the shapes to make them bounce.
+- `vendor/` — three.js r170 (plus its RoundedBoxGeometry addon), bundled locally so the site has no CDN dependency.
 
 Because the scripts are ES modules, preview it through a local server rather than opening the file directly:
 
