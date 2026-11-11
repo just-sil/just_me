@@ -89,6 +89,24 @@ An AI-assisted precision-agriculture concept focused on environmental monitoring
 
 I'm interested in the overlap between embedded systems, connected devices, useful automation, AI, and creative software. I also enjoy photography and exploring how visual ideas can complement technical work.
 
+## About This Site
+
+The portfolio is plain HTML, CSS and JavaScript with no build step.
+
+- `index.html` — all content.
+- `styles.css` — design tokens at the top (colours, fonts, spacing), dark and light themes.
+- `script.js` — scroll reveals, theme toggle, project filters and card tilt.
+- `board.js` — the 3D dev board in the hero. It is modelled in code with [three.js](https://threejs.org/) (no model files) and comes apart as you scroll through the Toolkit section.
+- `vendor/` — three.js r170, bundled locally so the site has no CDN dependency.
+
+Because the scripts are ES modules, preview it through a local server rather than opening the file directly:
+
+```bash
+python3 -m http.server 8000
+```
+
+Without WebGL, or with reduced motion enabled, the page falls back to a static layout.
+
 ## Get in Touch
 
 - **Email:** [simalmannekkara@gmail.com](mailto:simalmannekkara@gmail.com)

@@ -1,490 +1,486 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mohamed Simal M — portfolio and CV">
-  <title>Mohamed Simal M — CV</title>
+  <meta name="description" content="Mohamed Simal M — developer, electronics enthusiast and maker from Kerala. Projects where code meets the physical world: embedded systems, IoT, robotics and AI.">
+  <meta name="theme-color" content="#0A0F0C">
+  <title>Mohamed Simal M — Developer &amp; Maker</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mohamed Simal M — Developer &amp; Maker">
+  <meta property="og:description" content="Projects where code meets the physical world: embedded systems, IoT, robotics and AI.">
+  <meta property="og:url" content="https://just-sil.github.io/just_me/">
+  <meta property="og:image" content="https://just-sil.github.io/just_me/me.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230A0F0C'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23B7F000'/%3E%3C/svg%3E">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') d.setAttribute('data-theme', t);
+      } catch (e) {}
+      try {
+        if (window.WebGL2RenderingContext && document.createElement('canvas').getContext('webgl2')) {
+          d.classList.add('has-3d');
+        }
+      } catch (e) {}
+      // If the main script never runs, show everything rather than leave it hidden.
+      setTimeout(function () { if (!window.__booted) d.classList.remove('js'); }, 3500);
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div id="cv-root" class="u1">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
 
-  <div id="sc-progress" class="u2"></div>
-
-  <!-- ambient background -->
-  <div aria-hidden="true" class="u3">
-    <div class="u4"></div>
-    <div class="u5"></div>
-    <div class="u6"></div>
-  </div>
-
-  <div class="u7">
-
-    <!-- nav -->
-    <nav class="u8">
-      <a href="#top" class="u9">
-        <span class="u10"></span>
-      </a>
-      <div data-nav-links="" class="u11">
-        <a href="#projects" class="u12">Projects</a>
-        <a href="#experience" class="u13">Experience</a>
-        <a href="#skills" class="u14">Skills</a>
-        <a href="#education" class="u15">Education</a>
-        <a href="#contact" class="u16">Contact</a>
-      </div>
-    </nav>
-
-    <!-- hero -->
-    <header id="top" class="u17">
-      <div>
-        <div data-hero="" class="u18">Young Innovator · IoT &amp; Robotics</div>
-        <h1 data-hero="" class="u19">Mohamed<br>Simal M</h1>
-        <p data-hero="" class="u20">I design and build things that sense, think and move — from <span class="u21">Arduino</span> and <span class="u22">ESP</span> boards to <span class="u23">Raspberry&nbsp;Pi</span> and hand-wired electronics. Curious by default, driven by problems worth solving.</p>
-        <div data-hero="" class="u24">
-          <a href="#projects" class="u25">See my work</a>
-          <a href="#contact" class="u26">Get in touch</a>
-        </div>
-      </div>
-      <div data-hero="" class="u27">
-        <div class="u28">
-          <div class="u29"></div>
-          <img id="msm-photo" src="me.jpg" alt="Mohamed Simal M" class="profile-photo">
-          <div class="u30">available to learn</div>
-        </div>
-      </div>
-    </header>
-
-    <!-- marquee -->
-    <div class="u31">
-      <div class="u32">
-        <div class="u33">
-          <span class="u34">Arduino</span><span class="u35">·</span><span class="u36">ESP32 / ESP8266</span><span class="u37">·</span><span class="u38">Raspberry Pi</span><span class="u39">·</span><span class="u40">Sensors</span><span class="u41">·</span><span class="u42">Robotics</span><span class="u43">·</span><span class="u44">IoT Prototyping</span><span class="u45">·</span><span class="u46">Circuit Design</span><span class="u47">·</span>
-        </div>
-        <div aria-hidden="true" class="u48">
-          <span class="u49">Arduino</span><span class="u50">·</span><span class="u51">ESP32 / ESP8266</span><span class="u52">·</span><span class="u53">Raspberry Pi</span><span class="u54">·</span><span class="u55">Sensors</span><span class="u56">·</span><span class="u57">Robotics</span><span class="u58">·</span><span class="u59">IoT Prototyping</span><span class="u60">·</span><span class="u61">Circuit Design</span><span class="u62">·</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- philosophy quote -->
-    <div data-reveal class="u63">
-      <p class="u64">
-        “I firmly believe skill is the product of <span class="u65">curiosity</span> and <span class="u66">interest</span>.”
-      </p>
-    </div>
-
-    <!-- projects -->
-    <section id="projects" class="u67">
-      <div data-reveal="" class="u68">
-        <div class="u69">01 / PROJECTS</div>
-        <h2 class="u70">Things I've built</h2>
-        <p class="u71">A growing collection of software, AI, embedded systems and maker projects — from live tools to prototypes and works in progress.</p>
-      </div>
-      <div data-project-grid="" class="u72">
-        <article data-reveal="" class="u73">
-          <div class="u74">
-            <span class="u75">P-01</span>
-            <span class="u76">SOLO BUILD</span>
-          </div>
-          <h3 class="u77">CodeRoof</h3>
-          <p class="u78">An interactive learn-to-code platform built solo, entirely in vanilla HTML/CSS/JS with zero frameworks and no backend. 24 lessons across two courses — Programming Basics and Vibe Coding &amp; Prompt Engineering — each ending in exercises that auto-grade live in the browser: a hand-built simulated bash + Git terminal with its own virtual file system, and real Python execution via Pyodide (WebAssembly).<br><a href="https://just-sil.github.io/code_roof/">try now↗</a></p>
-          <div class="u79">
-            <span class="u80">Vanilla JS</span>
-            <span class="u81">WebAssembly / Pyodide</span>
-            <span class="u82">EdTech</span>
-            <span class="u83">Auto-grading</span>
-          </div>
-        </article>
-        <article data-reveal="" class="project-card">
-          <div class="project-card__header">
-            <span class="project-card__id">P-02</span>
-            <span class="project-card__meta">LIVE · CLOUDFLARE WORKERS</span>
-          </div>
-          <h3>GitGlow — GitHub Receipt Generator</h3>
-          <p class="project-card__description">A web app that turns GitHub profile activity into a customizable, receipt-style visual. Built to give developer activity a playful, shareable format.</p>
-          <div class="project-card__tags">
-            <span class="project-card__tag">JavaScript</span>
-            <span class="project-card__tag">GitHub</span>
-            <span class="project-card__tag">Cloudflare Workers</span>
-          </div>
-          <a class="project-card__link" href="https://gitglow.simalmannekkara.workers.dev/" target="_blank" rel="noopener noreferrer">Open GitGlow ↗</a>
-        </article>
-        <article data-reveal="" class="u84">
-          <div class="u85">
-            <span class="u86">P-03</span>
-            <span class="u87">STATE LEVEL ×2</span>
-          </div>
-          <h3 class="u88">EasyRation</h3>
-          <p class="u89">A digital ration-management system for the Public Distribution System (PDS) — RFID identifies beneficiaries, load sensors measure dispensed quantities, and a mobile app ties it together for transparency and easy tracking.</p>
-          <div class="u90">
-            <span class="u91">Arduino</span>
-            <span class="u92">RFID</span>
-            <span class="u93">Load Sensors</span>
-            <span class="u94">Mobile App</span>
-          </div>
-        </article>
-        <article data-reveal="" class="u95">
-          <div class="u96">
-            <span class="u97">P-04</span>
-            <span class="u98">YIP WINNER</span>
-          </div>
-          <h3 class="u99">MOT — Medicine On Time</h3>
-          <p class="u100">A healthcare robot that makes sure elderly people take their medicine on time — with reminders and automated restocking to keep medicines always available. State-level winner at the Young Innovators Programme.</p>
-          <div class="u101">
-            <span class="u102">Robotics</span>
-            <span class="u103">IoT</span>
-            <span class="u104">Healthcare</span>
-            <span class="u105">Automation</span>
-          </div>
-        </article>
-        <article data-reveal="" class="u106">
-          <div class="u107">P-05</div>
-          <h3 class="u108">AI Smart Farming System</h3>
-          <p class="u109">An AI-assisted precision-agriculture solution — environmental monitoring, automation and data-driven crop management to raise productivity and cut manual work.</p>
-          <div class="u110">
-            <span class="u111">AI</span>
-            <span class="u112">IoT</span>
-            <span class="u113">Agriculture</span>
-          </div>
-        </article>
-        <article data-reveal="" class="u114">
-          <div class="u115">P-06</div>
-          <h3 class="u116">Kaida — Pocket AI Assistant</h3>
-          <p class="u117">A pocket-sized, portable AI chatbot with voice — talk to it naturally and have it control your smart room hands-free, from anywhere.</p>
-          <div class="u118">
-            <span class="u119">AI</span>
-            <span class="u120">Voice</span>
-            <span class="u121">IoT</span>
-            <span class="u122">Portable</span>
-          </div>
-        </article>
-        <article data-reveal="" class="u123">
-          <div class="u124">P-07 · IN PROGRESS</div>
-          <h3 class="u125">PrintDaddy</h3>
-          <p class="u126">A web platform for an on-demand 3D-printing service — visitors can browse, submit their print jobs online and get them fabricated. Currently in development.</p>
-          <div class="u127">
-            <span class="u128">Web</span>
-            <span class="u129">Full-stack</span>
-            <span class="u130">3D Printing</span>
-            <span class="u131">Service</span>
-          </div>
-        </article>
-        <article data-reveal="" class="u132">
-          <div class="u133">P-08</div>
-          <h3 class="u134">Smart Room Automation</h3>
-          <p class="u135">A smart-room concept integrating IoT devices for automated lighting, appliance control and environmental monitoring — ESP32/ESP8266 with remote control.</p>
-          <div class="u136">
-            <span class="u137">ESP32</span>
-            <span class="u138">IoT</span>
-            <span class="u139">Automation</span>
-          </div>
-        </article>
-        <article data-reveal="" class="u140">
-          <div class="u141">P-09</div>
-          <h3 class="u142">RankRack</h3>
-          <p class="u143">A student ranking platform that organises marks and generates ranked results — making it easy to track and compare student performance.</p>
-          <div class="u144">
-            <span class="u145">Web</span>
-            <span class="u146">Python</span>
-            <span class="u147">Database</span>
-            <span class="u148">Education</span>
-          </div>
-        </article>
-        <article data-reveal="" class="u149">
-          <div class="u150">P-10</div>
-          <h3 class="u151">Automated Solar Panel Cleaning</h3>
-          <p class="u152">An autonomous solar-panel cleaning mechanism that boosts panel efficiency and cuts manual maintenance, using motorized cleaning and embedded control.</p>
-          <div class="u153">
-            <span class="u154">Robotics</span>
-            <span class="u155">Embedded</span>
-            <span class="u156">Solar</span>
-          </div>
-        </article>
-        <article data-reveal="" class="u157">
-          <div class="u158">P-11</div>
-          <h3 class="u159">RTSP CCTV Monitoring</h3>
-          <p class="u160">A multi-camera IP surveillance system built with Python and VLC — RTSP streaming configured for optimized simultaneous camera viewing.</p>
-          <div class="u161">
-            <span class="u162">Python</span>
-            <span class="u163">VLC</span>
-            <span class="u164">RTSP</span>
-          </div>
-        </article>
-        <article data-reveal="" class="u165">
-          <div class="u166">P-12</div>
-          <h3 class="u167">3D Printing &amp; Prototyping</h3>
-          <p class="u168">Designed and fabricated functional prototypes on an Anycubic Kobra 2 Neo — working with CAD models, PLA printing and print optimization.</p>
-          <div class="u169">
-            <span class="u170">3D Printing</span>
-            <span class="u171">CAD</span>
-            <span class="u172">PLA</span>
-          </div>
-        </article>
-        <article data-reveal="" class="u173">
-          <div class="u174">P-13</div>
-          <h3 class="u175">KEAM Rank Analyzer</h3>
-          <p class="u176">A Python &amp; Flask application that analyzes KEAM response sheets using OCR and automates score calculation.</p>
-          <div class="u177">
-            <span class="u178">Python</span>
-            <span class="u179">Flask</span>
-            <span class="u180">OCR</span>
-          </div>
-        </article>
-        <article data-reveal="" class="u181">
-          <div class="u182">P-14</div>
-          <h3 class="u183">Yocto Linux on i.MX7D Pico</h3>
-          <p class="u184">Cracked a locked i.MX7D Pico board and built a custom embedded Linux image from scratch with the Yocto Project — a full board bring-up, from bootloader to running OS.</p>
-          <div class="u185">
-            <span class="u186">Embedded Linux</span>
-            <span class="u187">Yocto</span>
-            <span class="u188">i.MX7D</span>
-            <span class="u189">Board Bring-up</span>
-          </div>
-        </article>
-        <article data-reveal="" class="u190">
-          <div class="u191">P-15</div>
-          <h3 class="u192">Contactless Attendance System</h3>
-          <p class="u193">A contactless attendance device using OpenCV2 for face recognition — automatically registers attendance with a timestamp, no touch or card needed.</p>
-          <div class="u194">
-            <span class="u195">Python</span>
-            <span class="u196">OpenCV</span>
-            <span class="u197">Face Recognition</span>
-            <span class="u198">Automation</span>
-          </div>
-        </article>
-        <article data-reveal="" class="project-card">
-          <div class="project-card__header">
-            <span class="project-card__id">P-16</span>
-            <span class="project-card__meta">PROTOTYPE · IN DEVELOPMENT</span>
-          </div>
-          <h3>Hello Kitty — Local AI Desktop Companion</h3>
-          <p class="project-card__description">A desktop companion overlay built with React and Tauri, connected to a locally running Ollama model (Qwen3:8b). The project explores a lightweight desktop interface for interacting with a local AI assistant.</p>
-          <div class="project-card__tags">
-            <span class="project-card__tag">React</span>
-            <span class="project-card__tag">Tauri</span>
-            <span class="project-card__tag">Ollama</span>
-            <span class="project-card__tag">Qwen3:8b</span>
-          </div>
-          <a class="project-card__link" href="https://github.com/just-sil/hello_kitty" target="_blank" rel="noopener noreferrer">View repository ↗</a>
-        </article>
-        <article data-reveal="" class="project-card">
-          <div class="project-card__header">
-            <span class="project-card__id">P-17</span>
-            <span class="project-card__meta">IN DEVELOPMENT</span>
-          </div>
-          <h3>Auto-Git — Git Workflow Automation</h3>
-          <p class="project-card__description">A file-watcher workflow for automating parts of a Git-based file handoff. It uses a <code>commit-message__filename.ext</code> naming convention to keep the intended commit message separate from the actual filename.</p>
-          <div class="project-card__tags">
-            <span class="project-card__tag">Git</span>
-            <span class="project-card__tag">Automation</span>
-            <span class="project-card__tag">File Watcher</span>
-          </div>
-          <a class="project-card__link" href="https://github.com/just-sil/auto-git" target="_blank" rel="noopener noreferrer">View repository ↗</a>
-        </article>
-        <article data-reveal="" class="project-card">
-          <div class="project-card__header">
-            <span class="project-card__id">P-18</span>
-            <span class="project-card__meta">WORK IN PROGRESS</span>
-          </div>
-          <h3>KERALA DRIVE — 3D Driving Simulator</h3>
-          <p class="project-card__description">A browser-based driving-simulator project inspired by Kerala roads. The planned experience explores a first-person WagonR cockpit, local road layouts and junctions, and traffic behaviour using real-time 3D web graphics.</p>
-          <div class="project-card__tags">
-            <span class="project-card__tag">Three.js</span>
-            <span class="project-card__tag">WebGL</span>
-            <span class="project-card__tag">JavaScript</span>
-            <span class="project-card__tag">3D Simulation</span>
-          </div>
-        </article>
-        <article data-reveal="" class="project-card">
-          <div class="project-card__header">
-            <span class="project-card__id">P-19</span>
-            <span class="project-card__meta">HARDWARE EXPERIMENT</span>
-          </div>
-          <h3>ESP32-C3 LED Matrix — Snake Experiment</h3>
-          <p class="project-card__description">An 8×8 LED matrix experiment using an ESP32-C3, with WLED setup and exploration of a Snake-style game for the compact display.</p>
-          <div class="project-card__tags">
-            <span class="project-card__tag">ESP32-C3</span>
-            <span class="project-card__tag">LED Matrix</span>
-            <span class="project-card__tag">WLED</span>
-            <span class="project-card__tag">Embedded C++</span>
-          </div>
-        </article>
-        <article data-reveal="" class="project-card">
-          <div class="project-card__header">
-            <span class="project-card__id">P-20</span>
-            <span class="project-card__meta">EARLY EXPLORATION</span>
-          </div>
-          <h3>DIY Pen Plotter</h3>
-          <p class="project-card__description">An exploratory pen-plotter build focused on translating digital drawings into physical pen movement, with an emphasis on simple motion control and reusing available components.</p>
-          <div class="project-card__tags">
-            <span class="project-card__tag">Electronics</span>
-            <span class="project-card__tag">Stepper Motors</span>
-            <span class="project-card__tag">Motion Control</span>
-            <span class="project-card__tag">DIY</span>
-          </div>
-        </article>
-      </div></div>
-    </section>
-
-    <!-- experience & achievements -->
-    <section id="experience" class="u199">
-      <div class="u200">
-        <div data-reveal="" class="u201">
-          <div class="u202">02 / INNOVATION &amp; COMPETITIONS</div>
-          <h2 class="u203">Recognised &amp; growing</h2>
-          <p class="u204">No formal jobs yet — but real work through innovation programmes, competitions and hands-on prototyping.</p>
-        </div>
-        <div class="u205">
-          <div data-reveal="" data-timeline-row="" class="u206">
-            <div class="u207">state level</div>
-            <div>
-              <h3 class="u208">Young Innovators Programme (YIP)</h3>
-              <div class="u209">
-                <span class="u210">State-level Winner</span>
-                <span class="u211">Reached state level ×2</span>
-              </div>
-              <p class="u212">Reached the state level twice in Kerala Startup Mission's Young Innovators Programme — presenting <span class="u213">Smart Room</span> automation, and <span class="u214">winning at state level with MOT (Medicine On Time)</span>, a bot that reminds elderly people to take their medicine and auto-restocks to keep it available.</p>
-            </div>
-          </div>
-          <div data-reveal="" data-timeline-row="" class="u215">
-            <div class="u216">state level</div>
-            <div>
-              <h3 class="u217">INSPIRE Awards — MANAK</h3>
-              <div class="u218">
-                <span class="u219">State level</span>
-              </div>
-              <p class="u220">Selected to the state level of the INSPIRE Awards – MANAK initiative, presenting <span class="u221">EasyRation</span> — a practical engineering solution with real societal impact.</p>
-            </div>
-          </div>
-          <div data-reveal="" data-timeline-row="" class="u222">
-            <div class="u223">2024–25</div>
-            <div>
-              <h3 class="u224">Kerala School Science Fair</h3>
-              <div class="u225">
-                <span class="u226">State level · 2024–25</span>
-              </div>
-              <p class="u227">Reached the state level of the Kerala School Science Fair (2024–25), presenting <span class="u228">EasyRation</span> as an engineering and technology innovation project.</p>
-            </div>
-          </div>
-          <div data-reveal="" data-timeline-row="" class="u229">
-            <div class="u230">TinkerHub</div>
-            <div>
-              <h3 class="u231">Code-a-Pookalam</h3>
-              <div class="u232">
-                <span class="u233">Winner — School Students</span>
-                <span class="u234">TinkerHub</span>
-              </div>
-              <p class="u235">Won in the school-students category of TinkerHub's Code-a-Pookalam — designing a traditional Onam pookalam entirely through code, blending creative design with programming.</p>
-            </div>
-          </div>
-          
-          <div data-reveal="" data-timeline-row="" class="u236">
-            <div class="u237">ongoing</div>
-            <div>
-              <h3 class="u238">Innovation &amp; Prototype Development</h3>
-              <p class="u239">Built multiple prototypes combining IoT, AI, embedded systems and automation — transforming ideas into functional proof-of-concept models.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- skills -->
-    <section id="skills" class="u240">
-      <div data-reveal="" class="u241">
-        <div class="u242">03 / SKILLS</div>
-        <h2 class="u243">From curiosity to prototypes</h2>
-        <p class="u71">I work across software and hardware, learning by experimenting and building things I can test in the real world.</p>
-      </div>
-      <div data-skills-grid="" class="u244">
-        <div data-reveal="" class="u245">
-          <h3 class="u246">My approach</h3>
-          <div class="u247">
-            <div class="u248"><span class="u249">01</span><span class="u250">Start with a problem</span></div>
-            <div class="u251"><span class="u252">02</span><span class="u253">Explore possible solutions</span></div>
-            <div class="u254"><span class="u255">03</span><span class="u256">Build, test and refine</span></div>
-          </div>
-        </div>
-        <div data-reveal="" class="u257">
-          <h3 class="u258">Tools &amp; technologies</h3>
-          <div class="u259">
-            <span class="u260">Arduino</span>
-            <span class="u261">ESP32 / ESP8266</span>
-            <span class="u262">Raspberry Pi</span>
-            <span class="u263">Circuit design</span>
-            <span class="u264">Sensors &amp; actuators</span>
-            <span class="u265">IoT prototyping</span>
-            <span class="u266">Robotics</span>
-            <span class="u267">Python</span>
-            <span class="u268">Flask &amp; web development</span>
-            <span class="u269">Computer vision</span>
-            <span class="u270">Linux &amp; open source</span>
-            <span class="u271">3D printing</span>
-          </div>
-        </div>
-      </div>
-      <div data-reveal="" class="u272">
-        <h3 class="u273">What I'm drawn to</h3>
-        <p class="u302">I'm drawn to projects where software meets the physical world — connected devices, useful automation and AI applied to practical problems.</p>
-      </div>
-    </section>
-
-    <!-- education -->
-    <section id="education" class="u292">
-      <div class="u293">
-        <div data-reveal="" class="u294">
-          <div class="u295">04 / EDUCATION</div>
-          <h2 class="u296">Learning path</h2>
-        </div>
-        <div data-reveal="" data-timeline-row="" class="u297">
-          <div class="u298">current</div>
-          <div>
-            <div class="u299">
-              <h3 class="u300">B.Tech in Computer Science and Business Systems</h3>
-              <span class="u301">Currently studying</span>
-            </div>
-            <p class="u302">Model Engineering College, Thrikkakara.</p>
-          </div>
-        </div>
-        <div data-reveal="" data-timeline-row="" class="u297">
-          <div class="u298">completed</div>
-          <div>
-            <div class="u299">
-              <h3 class="u300">Higher Secondary — Science (Class 12)</h3>
-              <span class="u301">95%</span>
-            </div>
-            <p class="u302">Passed Class 12 in the Science stream with 95%.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- contact -->
-    <section id="contact" class="u303">
-      <div data-reveal="" class="u304">
-        <div class="u305">05 / CONTACT</div>
-        <h2 class="u306">Let's build something.</h2>
-        <p class="u307">Got an idea, a project, or a question about electronics? I'd love to hear from you.</p>
-        <div class="u308">
-          <a href="mailto:simalmannekkara@gmail.com" class="u309">simalmannekkara@gmail.com</a>
-          <a href="https://github.com/just-sil" target="_blank" rel="noopener" class="u310">GitHub</a>
-          <a href="https://wa.me/+919633302482" target="_blank" rel="noopener" class="u311">Whatsapp</a>
-        </div>
-      </div>
-    </section>
-
-    <footer class="u312">
-      <span>© <span id="year"></span> Mohamed Simal M</span>
-      <span>Built with curiosity &amp; a soldering iron</span>
-    </footer>
-
-  </div>
+<!-- 3D layer: one fixed canvas, the board follows the two stage elements below -->
+<canvas id="scene" aria-hidden="true"></canvas>
+<div class="callout" id="callout" aria-hidden="true">
+  <span class="callout__dot"></span>
+  <span class="callout__line"></span>
+  <span class="callout__label"></span>
 </div>
 
-<script src="script.js"></script>
+<header class="nav">
+  <a class="nav__brand" href="#top" aria-label="Mohamed Simal M — back to top">
+    <span class="led" aria-hidden="true"></span>
+    <span class="nav__name">simal<span>.m</span></span>
+  </a>
+  <nav class="nav__links" aria-label="Sections">
+    <a href="#toolkit">Toolkit</a>
+    <a href="#projects">Work</a>
+    <a href="#experience">Recognition</a>
+    <a href="#about">About</a>
+  </nav>
+  <div class="nav__actions">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch colour theme">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="5.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 6.8a5.2 5.2 0 0 1 0 10.4z" fill="currentColor"/><path d="M12 1.5v2.6M12 19.9v2.6M1.5 12h2.6M19.9 12h2.6M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+    <a class="btn btn--primary btn--sm" href="#contact">Contact</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ───────────── hero ───────────── -->
+  <section class="hero" id="top">
+    <div class="hero__inner">
+      <div class="hero__top">
+        <p class="eyebrow" data-hero>Young Innovator · IoT &amp; Robotics</p>
+        <dl class="spec" data-hero>
+          <div><dt>Based in</dt><dd>Tirur, Kerala</dd></div>
+          <div><dt>Studying</dt><dd>B.Tech CSBS · MEC</dd></div>
+          <div><dt>Status</dt><dd><span class="led" aria-hidden="true"></span>available to learn</dd></div>
+        </dl>
+      </div>
+      <h1 class="hero__name" data-hero>
+        <span>Mohamed</span>
+        <span>Simal M</span>
+      </h1>
+
+      <div class="hero__stage" id="stage-hero" data-stage>
+        <span class="hero__hint">drag to spin</span>
+      </div>
+
+      <div class="hero__foot">
+        <div class="hero__copy">
+          <p class="hero__lede" data-hero>I design and build things that sense, think and move — from <strong>Arduino</strong> and <strong>ESP</strong> boards to <strong>Raspberry&nbsp;Pi</strong> and hand-wired electronics. Curious by default, driven by problems worth solving.</p>
+          <div class="hero__cta" data-hero>
+            <a class="btn btn--primary" href="#projects">See my work <span aria-hidden="true">↓</span></a>
+            <a class="btn" href="#contact">Get in touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="hero__scroll" href="#toolkit">
+      <span class="hero__scroll-3d">Scroll — it comes apart</span>
+      <span class="hero__scroll-flat">Scroll</span>
+      <span aria-hidden="true">↓</span>
+    </a>
+  </section>
+
+  <!-- ───────────── marquee ───────────── -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <div class="marquee__group">
+        <span>Arduino</span><span>ESP32 / ESP8266</span><span>Raspberry Pi</span><span>Sensors</span><span>Robotics</span><span>IoT Prototyping</span><span>Circuit Design</span><span>Python</span><span>Computer Vision</span><span>3D Printing</span>
+      </div>
+      <div class="marquee__group">
+        <span>Arduino</span><span>ESP32 / ESP8266</span><span>Raspberry Pi</span><span>Sensors</span><span>Robotics</span><span>IoT Prototyping</span><span>Circuit Design</span><span>Python</span><span>Computer Vision</span><span>3D Printing</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ───────────── toolkit: the board, taken apart ───────────── -->
+  <section class="kit" id="toolkit" aria-labelledby="kit-title">
+    <div class="kit__pin">
+      <div class="kit__text">
+        <p class="label">01 / Toolkit</p>
+        <h2 id="kit-title">From curiosity to prototypes</h2>
+        <p class="kit__intro">I work across software and hardware, learning by experimenting and building things I can test in the real world. Here is what I build with, one layer at a time.</p>
+
+        <ol class="kit__steps">
+          <li class="kit__step is-active" data-callout="U1 · Wi-Fi module">
+            <div class="kit__head"><span class="kit__ref">U1</span><h3>Embedded &amp; IoT</h3></div>
+            <div class="kit__body"><div>
+              <p>Small computers that sense the world and talk to the network.</p>
+              <ul class="chips"><li>Arduino</li><li>ESP32</li><li>ESP8266</li><li>Raspberry Pi</li><li>Sensors &amp; actuators</li><li>IoT prototyping</li></ul>
+            </div></div>
+          </li>
+          <li class="kit__step" data-callout="J1–J2 · pin headers">
+            <div class="kit__head"><span class="kit__ref">J1</span><h3>Electronics &amp; robotics</h3></div>
+            <div class="kit__body"><div>
+              <p>Where the board meets the breadboard — wiring, motors and mechanisms.</p>
+              <ul class="chips"><li>Circuit design</li><li>Prototyping</li><li>Robotics</li><li>Automation</li></ul>
+            </div></div>
+          </li>
+          <li class="kit__step" data-callout="J3 · USB-C + UART">
+            <div class="kit__head"><span class="kit__ref">J3</span><h3>Programming &amp; web</h3></div>
+            <div class="kit__body"><div>
+              <p>The link back to the laptop, where the code gets written.</p>
+              <ul class="chips"><li>Python</li><li>JavaScript</li><li>HTML</li><li>CSS</li><li>Flask</li></ul>
+            </div></div>
+          </li>
+          <li class="kit__step" data-callout="SW1–SW2 · BOOT / EN">
+            <div class="kit__head"><span class="kit__ref">SW</span><h3>Systems</h3></div>
+            <div class="kit__body"><div>
+              <p>Bringing boards up from the bootloader to a running operating system.</p>
+              <ul class="chips"><li>Linux</li><li>Yocto Project</li><li>Open-source tools</li></ul>
+            </div></div>
+          </li>
+          <li class="kit__step" data-callout="SoC · under the shield">
+            <div class="kit__head"><span class="kit__ref">IC</span><h3>Applied computing</h3></div>
+            <div class="kit__body"><div>
+              <p>Lifting the lid on vision, AI experiments and code that runs in the browser.</p>
+              <ul class="chips"><li>Computer vision</li><li>AI experiments</li><li>WebAssembly / Pyodide</li></ul>
+            </div></div>
+          </li>
+          <li class="kit__step" data-callout="PCB · the board itself">
+            <div class="kit__head"><span class="kit__ref">PCB</span><h3>Making</h3></div>
+            <div class="kit__body"><div>
+              <p>The physical part — printed, cut and assembled by hand.</p>
+              <ul class="chips"><li>3D printing</li><li>CAD-based prototyping</li></ul>
+            </div></div>
+          </li>
+        </ol>
+        <p class="kit__count" aria-hidden="true"><span id="kit-count">1</span> / 6</p>
+      </div>
+      <div class="kit__stage" id="stage-kit" data-stage></div>
+    </div>
+  </section>
+
+  <!-- ───────────── work ───────────── -->
+  <section class="section work" id="projects" aria-labelledby="work-title">
+    <header class="section__head" data-reveal>
+      <p class="label">02 / Work</p>
+      <h2 id="work-title">Things I've built</h2>
+      <p class="section__sub">A growing collection of software, AI, embedded systems and maker projects — from live tools to prototypes and works in progress.</p>
+    </header>
+
+    <div class="bento">
+      <article class="card card--xl" data-reveal>
+        <div class="card__face" data-tilt>
+          <div class="card__top"><span class="card__id">P-01</span><span class="badge">Solo build</span></div>
+          <h3>CodeRoof</h3>
+          <p>An interactive learn-to-code platform built solo, entirely in vanilla HTML/CSS/JS with zero frameworks and no backend. 24 lessons across two courses — Programming Basics and Vibe Coding &amp; Prompt Engineering — each ending in exercises that auto-grade live in the browser: a hand-built simulated bash + Git terminal with its own virtual file system, and real Python execution via Pyodide (WebAssembly).</p>
+          <div class="term" aria-hidden="true">
+            <div class="term__bar"><i></i><i></i><i></i><span>lesson-07 — terminal</span></div>
+            <pre class="term__out" id="term">$ git init
+Initialized empty Git repository
+$ python hello.py
+Hello from the browser
+✓ exercise passed</pre>
+          </div>
+          <ul class="tags"><li>Vanilla JS</li><li>WebAssembly / Pyodide</li><li>EdTech</li><li>Auto-grading</li></ul>
+          <a class="card__link" href="https://just-sil.github.io/code_roof/" target="_blank" rel="noopener noreferrer">Try CodeRoof <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="card card--m" data-reveal>
+        <div class="card__face" data-tilt>
+          <div class="card__top"><span class="card__id">P-04</span><span class="badge">YIP winner</span></div>
+          <h3>MOT — Medicine On Time</h3>
+          <p>A healthcare robot that makes sure elderly people take their medicine on time — with reminders and automated restocking to keep medicines always available. State-level winner at the Young Innovators Programme.</p>
+          <ul class="tags"><li>Robotics</li><li>IoT</li><li>Healthcare</li><li>Automation</li></ul>
+        </div>
+      </article>
+
+      <article class="card card--m" data-reveal>
+        <div class="card__face" data-tilt>
+          <div class="card__top"><span class="card__id">P-03</span><span class="badge">State level ×2</span></div>
+          <h3>EasyRation</h3>
+          <p>A digital ration-management system for the Public Distribution System (PDS) — RFID identifies beneficiaries, load sensors measure dispensed quantities, and a mobile app ties it together for transparency and easy tracking.</p>
+          <ul class="tags"><li>Arduino</li><li>RFID</li><li>Load Sensors</li><li>Mobile App</li></ul>
+        </div>
+      </article>
+
+      <article class="card card--s" data-reveal>
+        <div class="card__face" data-tilt>
+          <div class="card__top"><span class="card__id">P-02</span><span class="badge badge--live"><span class="led" aria-hidden="true"></span>Live</span></div>
+          <h3>GitGlow — GitHub Receipt Generator</h3>
+          <p>A web app that turns GitHub profile activity into a customizable, receipt-style visual. Built to give developer activity a playful, shareable format.</p>
+          <ul class="tags"><li>JavaScript</li><li>GitHub</li><li>Cloudflare Workers</li></ul>
+          <a class="card__link" href="https://gitglow.simalmannekkara.workers.dev/" target="_blank" rel="noopener noreferrer">Open GitGlow <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="card card--s" data-reveal>
+        <div class="card__face" data-tilt>
+          <div class="card__top"><span class="card__id">P-14</span><span class="badge badge--ghost">Board bring-up</span></div>
+          <h3>Yocto Linux on i.MX7D Pico</h3>
+          <p>Cracked a locked i.MX7D Pico board and built a custom embedded Linux image from scratch with the Yocto Project — a full board bring-up, from bootloader to running OS.</p>
+          <ul class="tags"><li>Embedded Linux</li><li>Yocto</li><li>i.MX7D</li></ul>
+        </div>
+      </article>
+
+      <article class="card card--s" data-reveal>
+        <div class="card__face" data-tilt>
+          <div class="card__top"><span class="card__id">P-06</span><span class="badge badge--ghost">Concept</span></div>
+          <h3>Kaida — Pocket AI Assistant</h3>
+          <p>A pocket-sized, portable AI chatbot with voice — talk to it naturally and have it control your smart room hands-free, from anywhere.</p>
+          <ul class="tags"><li>AI</li><li>Voice</li><li>IoT</li><li>Portable</li></ul>
+        </div>
+      </article>
+    </div>
+
+    <div class="index">
+      <div class="index__bar" data-reveal>
+        <h3>More builds &amp; experiments</h3>
+        <div class="filters" role="group" aria-label="Filter projects by type">
+          <button class="filter is-on" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" type="button" data-filter="hardware" aria-pressed="false">Hardware</button>
+          <button class="filter" type="button" data-filter="software" aria-pressed="false">Software</button>
+          <button class="filter" type="button" data-filter="ai" aria-pressed="false">AI</button>
+        </div>
+      </div>
+
+      <ul class="index__list" id="index-list">
+        <li class="row" data-cat="hardware ai" data-reveal>
+          <span class="row__id">P-05</span>
+          <h4 class="row__title">AI Smart Farming System</h4>
+          <p class="row__desc">An AI-assisted precision-agriculture solution — environmental monitoring, automation and data-driven crop management to raise productivity and cut manual work.</p>
+          <p class="row__meta">AI · IoT · Agriculture</p>
+        </li>
+        <li class="row" data-cat="software" data-reveal>
+          <span class="row__id">P-07</span>
+          <h4 class="row__title">PrintDaddy <span class="status">In progress</span></h4>
+          <p class="row__desc">A web platform for an on-demand 3D-printing service — visitors can browse, submit their print jobs online and get them fabricated. Currently in development.</p>
+          <p class="row__meta">Web · Full-stack · 3D Printing · Service</p>
+        </li>
+        <li class="row" data-cat="hardware" data-reveal>
+          <span class="row__id">P-08</span>
+          <h4 class="row__title">Smart Room Automation</h4>
+          <p class="row__desc">A smart-room concept integrating IoT devices for automated lighting, appliance control and environmental monitoring — ESP32/ESP8266 with remote control.</p>
+          <p class="row__meta">ESP32 · IoT · Automation</p>
+        </li>
+        <li class="row" data-cat="software" data-reveal>
+          <span class="row__id">P-09</span>
+          <h4 class="row__title">RankRack</h4>
+          <p class="row__desc">A student ranking platform that organises marks and generates ranked results — making it easy to track and compare student performance.</p>
+          <p class="row__meta">Web · Python · Database · Education</p>
+        </li>
+        <li class="row" data-cat="hardware" data-reveal>
+          <span class="row__id">P-10</span>
+          <h4 class="row__title">Automated Solar Panel Cleaning</h4>
+          <p class="row__desc">An autonomous solar-panel cleaning mechanism that boosts panel efficiency and cuts manual maintenance, using motorized cleaning and embedded control.</p>
+          <p class="row__meta">Robotics · Embedded · Solar</p>
+        </li>
+        <li class="row" data-cat="software" data-reveal>
+          <span class="row__id">P-11</span>
+          <h4 class="row__title">RTSP CCTV Monitoring</h4>
+          <p class="row__desc">A multi-camera IP surveillance system built with Python and VLC — RTSP streaming configured for optimized simultaneous camera viewing.</p>
+          <p class="row__meta">Python · VLC · RTSP</p>
+        </li>
+        <li class="row" data-cat="hardware" data-reveal>
+          <span class="row__id">P-12</span>
+          <h4 class="row__title">3D Printing &amp; Prototyping</h4>
+          <p class="row__desc">Designed and fabricated functional prototypes on an Anycubic Kobra 2 Neo — working with CAD models, PLA printing and print optimization.</p>
+          <p class="row__meta">3D Printing · CAD · PLA</p>
+        </li>
+        <li class="row" data-cat="software" data-reveal>
+          <span class="row__id">P-13</span>
+          <h4 class="row__title">KEAM Rank Analyzer</h4>
+          <p class="row__desc">A Python &amp; Flask application that analyzes KEAM response sheets using OCR and automates score calculation.</p>
+          <p class="row__meta">Python · Flask · OCR</p>
+        </li>
+        <li class="row" data-cat="software ai" data-reveal>
+          <span class="row__id">P-15</span>
+          <h4 class="row__title">Contactless Attendance System</h4>
+          <p class="row__desc">A contactless attendance device using OpenCV2 for face recognition — automatically registers attendance with a timestamp, no touch or card needed.</p>
+          <p class="row__meta">Python · OpenCV · Face Recognition · Automation</p>
+        </li>
+        <li class="row" data-cat="software ai" data-reveal>
+          <span class="row__id">P-16</span>
+          <h4 class="row__title"><a href="https://github.com/just-sil/hello_kitty" target="_blank" rel="noopener noreferrer">Hello Kitty — Local AI Desktop Companion <span aria-hidden="true">↗</span></a> <span class="status">Prototype</span></h4>
+          <p class="row__desc">A desktop companion overlay built with React and Tauri, connected to a locally running Ollama model (Qwen3:8b). The project explores a lightweight desktop interface for interacting with a local AI assistant.</p>
+          <p class="row__meta">React · Tauri · Ollama · Qwen3:8b</p>
+        </li>
+        <li class="row" data-cat="software" data-reveal>
+          <span class="row__id">P-17</span>
+          <h4 class="row__title"><a href="https://github.com/just-sil/auto-git" target="_blank" rel="noopener noreferrer">Auto-Git — Git Workflow Automation <span aria-hidden="true">↗</span></a> <span class="status">In development</span></h4>
+          <p class="row__desc">A file-watcher workflow for automating parts of a Git-based file handoff. It uses a <code>commit-message__filename.ext</code> naming convention to keep the intended commit message separate from the actual filename.</p>
+          <p class="row__meta">Git · Automation · File Watcher</p>
+        </li>
+        <li class="row" data-cat="software" data-reveal>
+          <span class="row__id">P-18</span>
+          <h4 class="row__title">KERALA DRIVE — 3D Driving Simulator <span class="status">Work in progress</span></h4>
+          <p class="row__desc">A browser-based driving-simulator project inspired by Kerala roads. The planned experience explores a first-person WagonR cockpit, local road layouts and junctions, and traffic behaviour using real-time 3D web graphics.</p>
+          <p class="row__meta">Three.js · WebGL · JavaScript · 3D Simulation</p>
+        </li>
+        <li class="row" data-cat="hardware" data-reveal>
+          <span class="row__id">P-19</span>
+          <h4 class="row__title">ESP32-C3 LED Matrix — Snake Experiment <span class="status">Hardware experiment</span></h4>
+          <p class="row__desc">An 8×8 LED matrix experiment using an ESP32-C3, with WLED setup and exploration of a Snake-style game for the compact display.</p>
+          <p class="row__meta">ESP32-C3 · LED Matrix · WLED · Embedded C++</p>
+        </li>
+        <li class="row" data-cat="hardware" data-reveal>
+          <span class="row__id">P-20</span>
+          <h4 class="row__title">DIY Pen Plotter <span class="status">Early exploration</span></h4>
+          <p class="row__desc">An exploratory pen-plotter build focused on translating digital drawings into physical pen movement, with an emphasis on simple motion control and reusing available components.</p>
+          <p class="row__meta">Electronics · Stepper Motors · Motion Control · DIY</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ───────────── quote ───────────── -->
+  <section class="quote" aria-label="Philosophy">
+    <svg class="trace" viewBox="0 0 600 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30H210l22-22h136l22 22h210" pathLength="1"/><circle cx="232" cy="8" r="4"/><circle cx="368" cy="8" r="4"/></svg>
+    <blockquote id="quote">
+      <p>“I firmly believe skill is the product of <em>curiosity</em> and <em>interest</em>.”</p>
+    </blockquote>
+  </section>
+
+  <!-- ───────────── recognition ───────────── -->
+  <section class="section awards" id="experience" aria-labelledby="awards-title">
+    <header class="section__head" data-reveal>
+      <p class="label">03 / Recognition</p>
+      <h2 id="awards-title">Recognised &amp; growing</h2>
+      <p class="section__sub">No formal jobs yet — but real work through innovation programmes, competitions and hands-on prototyping.</p>
+    </header>
+
+    <ol class="awards__list">
+      <li class="award" data-reveal>
+        <p class="award__when">State level</p>
+        <div class="award__main">
+          <h3>Young Innovators Programme (YIP)</h3>
+          <p class="badges"><span class="badge">State-level winner</span><span class="badge badge--ghost">Reached state level ×2</span></p>
+        </div>
+        <p class="award__desc">Reached the state level twice in Kerala Startup Mission's Young Innovators Programme — presenting <strong>Smart Room</strong> automation, and <strong>winning at state level with MOT (Medicine On Time)</strong>, a bot that reminds elderly people to take their medicine and auto-restocks to keep it available.</p>
+      </li>
+      <li class="award" data-reveal>
+        <p class="award__when">State level</p>
+        <div class="award__main">
+          <h3>INSPIRE Awards — MANAK</h3>
+          <p class="badges"><span class="badge badge--ghost">State level</span></p>
+        </div>
+        <p class="award__desc">Selected to the state level of the INSPIRE Awards – MANAK initiative, presenting <strong>EasyRation</strong> — a practical engineering solution with real societal impact.</p>
+      </li>
+      <li class="award" data-reveal>
+        <p class="award__when">2024–25</p>
+        <div class="award__main">
+          <h3>Kerala School Science Fair</h3>
+          <p class="badges"><span class="badge badge--ghost">State level · 2024–25</span></p>
+        </div>
+        <p class="award__desc">Reached the state level of the Kerala School Science Fair (2024–25), presenting <strong>EasyRation</strong> as an engineering and technology innovation project.</p>
+      </li>
+      <li class="award" data-reveal>
+        <p class="award__when">TinkerHub</p>
+        <div class="award__main">
+          <h3>Code-a-Pookalam</h3>
+          <p class="badges"><span class="badge">Winner — school students</span></p>
+        </div>
+        <p class="award__desc">Won in the school-students category of TinkerHub's Code-a-Pookalam — designing a traditional Onam pookalam entirely through code, blending creative design with programming.</p>
+      </li>
+      <li class="award" data-reveal>
+        <p class="award__when">Ongoing</p>
+        <div class="award__main">
+          <h3>Innovation &amp; prototype development</h3>
+        </div>
+        <p class="award__desc">Built multiple prototypes combining IoT, AI, embedded systems and automation — transforming ideas into functional proof-of-concept models.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ───────────── about + education ───────────── -->
+  <section class="section about" id="about" aria-labelledby="about-title">
+    <div class="about__grid">
+      <div class="about__photo" data-reveal>
+        <figure class="photo" data-tilt>
+          <img id="msm-photo" src="me.jpg" alt="Mohamed Simal M, smiling outdoors by the sea" width="1444" height="1444" loading="lazy" decoding="async">
+          <figcaption><span class="led" aria-hidden="true"></span>available to learn</figcaption>
+        </figure>
+      </div>
+
+      <div class="about__text">
+        <header data-reveal>
+          <p class="label">04 / About</p>
+          <h2 id="about-title">Code meets the physical world</h2>
+        </header>
+        <div class="about__bio" data-reveal>
+          <p>I'm Mohamed Simal M, a Computer Science and Business Systems student at Model Engineering College, Thrikkakara, from Tirur, Malappuram, Kerala.</p>
+          <p>I'm drawn to projects where software meets the physical world — connected devices, useful automation and AI applied to practical problems. I learn best by making things, testing them, breaking them, and improving them. I also enjoy photography and exploring how visual ideas can complement technical work.</p>
+        </div>
+
+        <div class="approach" data-reveal>
+          <h3 class="approach__title">My approach</h3>
+          <ol>
+            <li><span>01</span>Start with a problem</li>
+            <li><span>02</span>Explore possible solutions</li>
+            <li><span>03</span>Build, test and refine</li>
+          </ol>
+        </div>
+
+        <div class="edu" id="education" data-reveal>
+          <h3 class="approach__title">Learning path</h3>
+          <div class="edu__row">
+            <p class="edu__when">Current</p>
+            <div>
+              <h4>B.Tech in Computer Science and Business Systems</h4>
+              <p>Model Engineering College, Thrikkakara.</p>
+            </div>
+            <span class="badge badge--ghost">Currently studying</span>
+          </div>
+          <div class="edu__row">
+            <p class="edu__when">Completed</p>
+            <div>
+              <h4>Higher Secondary — Science (Class 12)</h4>
+              <p>Passed Class 12 in the Science stream with 95%.</p>
+            </div>
+            <span class="badge">95%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── contact ───────────── -->
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="contact__inner" data-reveal>
+      <p class="label">05 / Contact</p>
+      <h2 id="contact-title">Let's build<br>something.</h2>
+      <p class="contact__sub">Got an idea, a project, or a question about electronics? I'd love to hear from you.</p>
+      <a class="contact__mail" href="mailto:simalmannekkara@gmail.com">simalmannekkara@gmail.com</a>
+      <ul class="contact__links">
+        <li><a href="https://github.com/just-sil" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://wa.me/+919633302482" target="_blank" rel="noopener noreferrer">WhatsApp <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://www.instagram.com/silman0_0/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>© <span id="year">2026</span> Mohamed Simal M</span>
+  <span>Built with curiosity &amp; a soldering iron</span>
+  <span class="footer__time">Kerala <span id="clock">--:--</span> IST</span>
+</footer>
+
+<script type="module" src="script.js"></script>
 </body>
 </html>
