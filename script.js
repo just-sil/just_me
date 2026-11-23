@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Remember which design the visitor switched to
+  document.querySelectorAll("[data-view]").forEach((link) => {
+    link.addEventListener("click", () => {
+      try { localStorage.setItem("cv-view", link.dataset.view); } catch (_) {}
+    });
+  });
+
   const yearElement = document.getElementById("year");
   if (yearElement) yearElement.textContent = new Date().getFullYear();
 
