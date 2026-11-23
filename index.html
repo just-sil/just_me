@@ -9,6 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    // Visitors who picked the experimental design last time go straight back to it.
+    try { if (localStorage.getItem("cv-view") === "experiment") location.replace("experiment/"); } catch (_) {}
+  </script>
 </head>
 <body>
 <div id="cv-root" class="u1">
@@ -36,6 +40,7 @@
         <a href="#education" class="u15">Education</a>
         <a href="#contact" class="u16">Contact</a>
       </div>
+      <a href="experiment/" class="view-switch" data-view="experiment" title="Switch to the experimental 3D design">✦ Experiment view</a>
     </nav>
 
     <!-- hero -->
@@ -99,19 +104,19 @@
             <span class="u83">Auto-grading</span>
           </div>
         </article>
-        <article data-reveal="" class="project-card">
-          <div class="project-card__header">
-            <span class="project-card__id">P-02</span>
-            <span class="project-card__meta">LIVE · CLOUDFLARE WORKERS</span>
+        <article data-reveal="" class="u95">
+          <div class="u96">
+            <span class="u97">P-02</span>
+            <span class="u98">YIP WINNER</span>
           </div>
-          <h3>GitGlow — GitHub Receipt Generator</h3>
-          <p class="project-card__description">A web app that turns GitHub profile activity into a customizable, receipt-style visual. Built to give developer activity a playful, shareable format.</p>
-          <div class="project-card__tags">
-            <span class="project-card__tag">JavaScript</span>
-            <span class="project-card__tag">GitHub</span>
-            <span class="project-card__tag">Cloudflare Workers</span>
+          <h3 class="u99">MOT — Medicine On Time</h3>
+          <p class="u100">A healthcare robot that makes sure elderly people take their medicine on time — with reminders and automated restocking to keep medicines always available. State-level winner at the Young Innovators Programme.</p>
+          <div class="u101">
+            <span class="u102">Robotics</span>
+            <span class="u103">IoT</span>
+            <span class="u104">Healthcare</span>
+            <span class="u105">Automation</span>
           </div>
-          <a class="project-card__link" href="https://gitglow.pages.dev/" target="_blank" rel="noopener noreferrer">Open GitGlow ↗</a>
         </article>
         <article data-reveal="" class="u84">
           <div class="u85">
@@ -127,54 +132,95 @@
             <span class="u94">Mobile App</span>
           </div>
         </article>
-        <article data-reveal="" class="u95">
-          <div class="u96">
-            <span class="u97">P-04</span>
-            <span class="u98">YIP WINNER</span>
+        <article data-reveal="" class="project-card">
+          <div class="project-card__header">
+            <span class="project-card__id">P-04</span>
+            <span class="project-card__meta">RELEASED · ANDROID APK</span>
           </div>
-          <h3 class="u99">MOT — Medicine On Time</h3>
-          <p class="u100">A healthcare robot that makes sure elderly people take their medicine on time — with reminders and automated restocking to keep medicines always available. State-level winner at the Young Innovators Programme.</p>
-          <div class="u101">
-            <span class="u102">Robotics</span>
-            <span class="u103">IoT</span>
-            <span class="u104">Healthcare</span>
-            <span class="u105">Automation</span>
+          <h3>Chillara — Offline-first AI Expense Tracker</h3>
+          <p class="project-card__description">Log a spend in plain words like “24 tea” on your phone, even offline. When it syncs over USB or Wi-Fi, a self-hosted LLM on the laptop extracts amount, category and date into PostgreSQL. Daily limits and weekly summaries, with nothing sent to the cloud.</p>
+          <div class="project-card__tags">
+            <span class="project-card__tag">Flutter</span>
+            <span class="project-card__tag">SQLite</span>
+            <span class="project-card__tag">Ollama · Qwen3:8b</span>
+            <span class="project-card__tag">Flask</span>
+            <span class="project-card__tag">PostgreSQL</span>
+          </div>
+          <a class="project-card__link" href="https://github.com/just-sil/expense_tracker" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+        </article>
+        <article data-reveal="" class="project-card">
+          <div class="project-card__header">
+            <span class="project-card__id">P-05</span>
+            <span class="project-card__meta">NEW</span>
+          </div>
+          <h3>EG Sim — Projection of Solids Playground</h3>
+          <p class="project-card__description">A drafting playground for KTU Engineering Graphics (Module 2). Draw projections on a snapping drafting sheet with exact input, follow step-by-step ghost constructions, get progressive hints and auto-checked answers, and inspect each stage of the solid in 3D.</p>
+          <div class="project-card__tags">
+            <span class="project-card__tag">JavaScript</span>
+            <span class="project-card__tag">Three.js</span>
+            <span class="project-card__tag">Canvas</span>
+            <span class="project-card__tag">EdTech</span>
+          </div>
+          <a class="project-card__link" href="https://github.com/just-sil/eg-sim" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+        </article>
+        <article data-reveal="" class="u181">
+          <div class="u182">P-06</div>
+          <h3 class="u183">Yocto Linux on i.MX7D Pico</h3>
+          <p class="u184">Cracked a locked i.MX7D Pico board and built a custom embedded Linux image from scratch with the Yocto Project — a full board bring-up, from bootloader to running OS.</p>
+          <div class="u185">
+            <span class="u186">Embedded Linux</span>
+            <span class="u187">Yocto</span>
+            <span class="u188">i.MX7D</span>
+            <span class="u189">Board Bring-up</span>
           </div>
         </article>
-        <article data-reveal="" class="u106">
-          <div class="u107">P-05</div>
-          <h3 class="u108">AI Smart Farming System</h3>
-          <p class="u109">An AI-assisted precision-agriculture solution — environmental monitoring, automation and data-driven crop management to raise productivity and cut manual work.</p>
-          <div class="u110">
-            <span class="u111">AI</span>
-            <span class="u112">IoT</span>
-            <span class="u113">Agriculture</span>
+        <article data-reveal="" class="project-card">
+          <div class="project-card__header">
+            <span class="project-card__id">P-07</span>
+            <span class="project-card__meta">PLAYABLE · IN DEVELOPMENT</span>
           </div>
+          <h3>Woolly Run 2 — Sheep Platformer</h3>
+          <p class="project-card__description">A canvas platformer for the web: 20 levels across 5 themed worlds, an endless Woolly Rush mode, a coin economy with a shop, daily rewards and leaderboards. All graphics and sound are generated in code, with Supabase handling login and validating every coin server-side.</p>
+          <div class="project-card__tags">
+            <span class="project-card__tag">JavaScript</span>
+            <span class="project-card__tag">Canvas</span>
+            <span class="project-card__tag">WebAudio</span>
+            <span class="project-card__tag">Supabase</span>
+            <span class="project-card__tag">Node.js</span>
+          </div>
+          <a class="project-card__link" href="https://github.com/just-sil/cospo" target="_blank" rel="noopener noreferrer">View repository ↗</a>
         </article>
-        <article data-reveal="" class="u114">
-          <div class="u115">P-06</div>
-          <h3 class="u116">Kaida — Pocket AI Assistant</h3>
-          <p class="u117">A pocket-sized, portable AI chatbot with voice — talk to it naturally and have it control your smart room hands-free, from anywhere.</p>
-          <div class="u118">
-            <span class="u119">AI</span>
-            <span class="u120">Voice</span>
-            <span class="u121">IoT</span>
-            <span class="u122">Portable</span>
+        <article data-reveal="" class="project-card">
+          <div class="project-card__header">
+            <span class="project-card__id">P-08</span>
+            <span class="project-card__meta">LIVE · CLOUDFLARE WORKERS</span>
           </div>
+          <h3>GitGlow — GitHub Receipt Generator</h3>
+          <p class="project-card__description">A web app that turns GitHub profile activity into a customizable, receipt-style visual. Built to give developer activity a playful, shareable format.</p>
+          <div class="project-card__tags">
+            <span class="project-card__tag">JavaScript</span>
+            <span class="project-card__tag">GitHub</span>
+            <span class="project-card__tag">Cloudflare Workers</span>
+          </div>
+          <a class="project-card__link" href="https://gitglow.pages.dev/" target="_blank" rel="noopener noreferrer">Open GitGlow ↗</a>
         </article>
-        <article data-reveal="" class="u123">
-          <div class="u124">P-07 · IN PROGRESS</div>
-          <h3 class="u125">PrintDaddy</h3>
-          <p class="u126">A web platform for an on-demand 3D-printing service — visitors can browse, submit their print jobs online and get them fabricated. Currently in development.</p>
-          <div class="u127">
-            <span class="u128">Web</span>
-            <span class="u129">Full-stack</span>
-            <span class="u130">3D Printing</span>
-            <span class="u131">Service</span>
+        <article data-reveal="" class="project-card">
+          <div class="project-card__header">
+            <span class="project-card__id">P-09</span>
+            <span class="project-card__meta">HARDWARE + CLOUD</span>
           </div>
+          <h3>Telegram → ESP32 OLED Display</h3>
+          <p class="project-card__description">Send a message, photo or short video to a Telegram bot and it shows up on a tiny 128×64 OLED. A Cloudflare Worker stores the latest message, an ffmpeg service converts media into dithered 1-bit frames, and the battery-friendly ESP32 checks in every few minutes.</p>
+          <div class="project-card__tags">
+            <span class="project-card__tag">ESP32</span>
+            <span class="project-card__tag">Cloudflare Workers</span>
+            <span class="project-card__tag">ffmpeg</span>
+            <span class="project-card__tag">Telegram Bot</span>
+          </div>
+          <a class="project-card__link" href="https://github.com/just-sil/pathiribot" target="_blank" rel="noopener noreferrer">View repository ↗</a>
         </article>
         <article data-reveal="" class="u132">
-          <div class="u133">P-08</div>
+          <div class="u133">P-10</div>
           <h3 class="u134">Smart Room Automation</h3>
           <p class="u135">A smart-room concept integrating IoT devices for automated lighting, appliance control and environmental monitoring — ESP32/ESP8266 with remote control.</p>
           <div class="u136">
@@ -183,66 +229,58 @@
             <span class="u139">Automation</span>
           </div>
         </article>
-        <article data-reveal="" class="u140">
-          <div class="u141">P-09</div>
-          <h3 class="u142">RankRack</h3>
-          <p class="u143">A student ranking platform that organises marks and generates ranked results — making it easy to track and compare student performance.</p>
-          <div class="u144">
-            <span class="u145">Web</span>
-            <span class="u146">Python</span>
-            <span class="u147">Database</span>
-            <span class="u148">Education</span>
+        <article data-reveal="" class="project-card">
+          <div class="project-card__header">
+            <span class="project-card__id">P-11</span>
+            <span class="project-card__meta">DAILY DRIVER</span>
+          </div>
+          <h3>anykey — One Keyboard, Two Computers</h3>
+          <p class="project-card__description">A software KVM that shares one keyboard and mouse between a Windows PC and a Fedora laptop with a hotkey. Low-level Windows hooks forward input over HMAC-authenticated TCP to virtual uinput devices, so it works on Wayland, the lock screen and TTYs. Standard library only.</p>
+          <div class="project-card__tags">
+            <span class="project-card__tag">Python</span>
+            <span class="project-card__tag">Win32 Hooks</span>
+            <span class="project-card__tag">Linux uinput</span>
+            <span class="project-card__tag">Networking</span>
           </div>
         </article>
-        <article data-reveal="" class="u149">
-          <div class="u150">P-10</div>
-          <h3 class="u151">Automated Solar Panel Cleaning</h3>
-          <p class="u152">An autonomous solar-panel cleaning mechanism that boosts panel efficiency and cuts manual maintenance, using motorized cleaning and embedded control.</p>
-          <div class="u153">
-            <span class="u154">Robotics</span>
-            <span class="u155">Embedded</span>
-            <span class="u156">Solar</span>
+        <article data-reveal="" class="project-card">
+          <div class="project-card__header">
+            <span class="project-card__id">P-12</span>
+            <span class="project-card__meta">LIVE</span>
           </div>
-        </article>
-        <article data-reveal="" class="u157">
-          <div class="u158">P-11</div>
-          <h3 class="u159">RTSP CCTV Monitoring</h3>
-          <p class="u160">A multi-camera IP surveillance system built with Python and VLC — RTSP streaming configured for optimized simultaneous camera viewing.</p>
-          <div class="u161">
-            <span class="u162">Python</span>
-            <span class="u163">VLC</span>
-            <span class="u164">RTSP</span>
+          <h3>Circuits Lab — Zener Diode Simulator</h3>
+          <p class="project-card__description">A virtual physics lab for the Zener diode characteristics experiment. Wire the circuit yourself, get live feedback on each connection, then run the simulation, move the rheostat, record readings and plot the characteristic graph, all in the browser.</p>
+          <div class="project-card__tags">
+            <span class="project-card__tag">JavaScript</span>
+            <span class="project-card__tag">Simulation</span>
+            <span class="project-card__tag">Electronics</span>
+            <span class="project-card__tag">EdTech</span>
           </div>
+          <a class="project-card__link" href="https://just-sil.github.io/sim-lab/" target="_blank" rel="noopener noreferrer">Try it live ↗</a>
         </article>
-        <article data-reveal="" class="u165">
-          <div class="u166">P-12</div>
-          <h3 class="u167">3D Printing &amp; Prototyping</h3>
-          <p class="u168">Designed and fabricated functional prototypes on an Anycubic Kobra 2 Neo — working with CAD models, PLA printing and print optimization.</p>
-          <div class="u169">
-            <span class="u170">3D Printing</span>
-            <span class="u171">CAD</span>
-            <span class="u172">PLA</span>
+        <article data-reveal="" class="project-card">
+          <div class="project-card__header">
+            <span class="project-card__id">P-13</span>
+            <span class="project-card__meta">SELF-HOSTED</span>
           </div>
-        </article>
-        <article data-reveal="" class="u173">
-          <div class="u174">P-13</div>
-          <h3 class="u175">KEAM Rank Analyzer</h3>
-          <p class="u176">A Python &amp; Flask application that analyzes KEAM response sheets using OCR and automates score calculation.</p>
-          <div class="u177">
-            <span class="u178">Python</span>
-            <span class="u179">Flask</span>
-            <span class="u180">OCR</span>
+          <h3>Stick Verse — WhatsApp Sticker Sharing</h3>
+          <p class="project-card__description">A site for sharing WhatsApp stickers in private groups: admin-approved membership, packs auto-converted to 512×512 WebP, likes and super likes, and a top-contributors board. Exposed safely through a Cloudflare Tunnel that sends the public link to Telegram.</p>
+          <div class="project-card__tags">
+            <span class="project-card__tag">Node.js</span>
+            <span class="project-card__tag">Express</span>
+            <span class="project-card__tag">SQLite</span>
+            <span class="project-card__tag">Cloudflare Tunnel</span>
           </div>
+          <a class="project-card__link" href="https://github.com/just-sil/stickverse" target="_blank" rel="noopener noreferrer">View repository ↗</a>
         </article>
-        <article data-reveal="" class="u181">
-          <div class="u182">P-14</div>
-          <h3 class="u183">Yocto Linux on i.MX7D Pico</h3>
-          <p class="u184">Cracked a locked i.MX7D Pico board and built a custom embedded Linux image from scratch with the Yocto Project — a full board bring-up, from bootloader to running OS.</p>
-          <div class="u185">
-            <span class="u186">Embedded Linux</span>
-            <span class="u187">Yocto</span>
-            <span class="u188">i.MX7D</span>
-            <span class="u189">Board Bring-up</span>
+        <article data-reveal="" class="u106">
+          <div class="u107">P-14</div>
+          <h3 class="u108">AI Smart Farming System</h3>
+          <p class="u109">An AI-assisted precision-agriculture solution — environmental monitoring, automation and data-driven crop management to raise productivity and cut manual work.</p>
+          <div class="u110">
+            <span class="u111">AI</span>
+            <span class="u112">IoT</span>
+            <span class="u113">Agriculture</span>
           </div>
         </article>
         <article data-reveal="" class="u190">
@@ -256,9 +294,19 @@
             <span class="u198">Automation</span>
           </div>
         </article>
+        <article data-reveal="" class="u173">
+          <div class="u174">P-16</div>
+          <h3 class="u175">KEAM Rank Analyzer</h3>
+          <p class="u176">A Python &amp; Flask application that analyzes KEAM response sheets using OCR and automates score calculation.</p>
+          <div class="u177">
+            <span class="u178">Python</span>
+            <span class="u179">Flask</span>
+            <span class="u180">OCR</span>
+          </div>
+        </article>
         <article data-reveal="" class="project-card">
           <div class="project-card__header">
-            <span class="project-card__id">P-16</span>
+            <span class="project-card__id">P-17</span>
             <span class="project-card__meta">PROTOTYPE · IN DEVELOPMENT</span>
           </div>
           <h3>Hello Kitty — Local AI Desktop Companion</h3>
@@ -271,9 +319,92 @@
           </div>
           <a class="project-card__link" href="https://github.com/just-sil/hello_kitty" target="_blank" rel="noopener noreferrer">View repository ↗</a>
         </article>
+        <article data-reveal="" class="u149">
+          <div class="u150">P-18</div>
+          <h3 class="u151">Automated Solar Panel Cleaning</h3>
+          <p class="u152">An autonomous solar-panel cleaning mechanism that boosts panel efficiency and cuts manual maintenance, using motorized cleaning and embedded control.</p>
+          <div class="u153">
+            <span class="u154">Robotics</span>
+            <span class="u155">Embedded</span>
+            <span class="u156">Solar</span>
+          </div>
+        </article>
+        <article data-reveal="" class="u157">
+          <div class="u158">P-19</div>
+          <h3 class="u159">RTSP CCTV Monitoring</h3>
+          <p class="u160">A multi-camera IP surveillance system built with Python and VLC — RTSP streaming configured for optimized simultaneous camera viewing.</p>
+          <div class="u161">
+            <span class="u162">Python</span>
+            <span class="u163">VLC</span>
+            <span class="u164">RTSP</span>
+          </div>
+        </article>
+        <article data-reveal="" class="u140">
+          <div class="u141">P-20</div>
+          <h3 class="u142">RankRack</h3>
+          <p class="u143">A student ranking platform that organises marks and generates ranked results — making it easy to track and compare student performance.</p>
+          <div class="u144">
+            <span class="u145">Web</span>
+            <span class="u146">Python</span>
+            <span class="u147">Database</span>
+            <span class="u148">Education</span>
+          </div>
+        </article>
         <article data-reveal="" class="project-card">
           <div class="project-card__header">
-            <span class="project-card__id">P-17</span>
+            <span class="project-card__id">P-21</span>
+            <span class="project-card__meta">RASPBERRY PI EXPERIMENT</span>
+          </div>
+          <h3>Potentiometer Radio</h3>
+          <p class="project-card__description">A retro-style radio on a Raspberry Pi: turning a potentiometer, read through an MCP3008 ADC, tunes between Music, AI and Standby bands like a real dial. The music band plays local tracks or streams from the Audius API through VLC; the AI band is next.</p>
+          <div class="project-card__tags">
+            <span class="project-card__tag">Raspberry Pi</span>
+            <span class="project-card__tag">Python</span>
+            <span class="project-card__tag">MCP3008</span>
+            <span class="project-card__tag">Audius API</span>
+          </div>
+          <a class="project-card__link" href="https://github.com/just-sil/the-faah-radio" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+        </article>
+        <article data-reveal="" class="u114">
+          <div class="u115">P-22</div>
+          <h3 class="u116">Kaida — Pocket AI Assistant</h3>
+          <p class="u117">A pocket-sized, portable AI chatbot with voice — talk to it naturally and have it control your smart room hands-free, from anywhere.</p>
+          <div class="u118">
+            <span class="u119">AI</span>
+            <span class="u120">Voice</span>
+            <span class="u121">IoT</span>
+            <span class="u122">Portable</span>
+          </div>
+        </article>
+        <article data-reveal="" class="project-card">
+          <div class="project-card__header">
+            <span class="project-card__id">P-23</span>
+            <span class="project-card__meta">WORK IN PROGRESS</span>
+          </div>
+          <h3>KERALA DRIVE — 3D Driving Simulator</h3>
+          <p class="project-card__description">A browser-based driving-simulator project inspired by Kerala roads. The planned experience explores a first-person WagonR cockpit, local road layouts and junctions, and traffic behaviour using real-time 3D web graphics.</p>
+          <div class="project-card__tags">
+            <span class="project-card__tag">Three.js</span>
+            <span class="project-card__tag">WebGL</span>
+            <span class="project-card__tag">JavaScript</span>
+            <span class="project-card__tag">3D Simulation</span>
+          </div>
+          <a class="project-card__link" href="https://github.com/just-sil/kerala-drive" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+        </article>
+        <article data-reveal="" class="u123">
+          <div class="u124">P-24 · IN PROGRESS</div>
+          <h3 class="u125">PrintDaddy</h3>
+          <p class="u126">A web platform for an on-demand 3D-printing service — visitors can browse, submit their print jobs online and get them fabricated. Currently in development.</p>
+          <div class="u127">
+            <span class="u128">Web</span>
+            <span class="u129">Full-stack</span>
+            <span class="u130">3D Printing</span>
+            <span class="u131">Service</span>
+          </div>
+        </article>
+        <article data-reveal="" class="project-card">
+          <div class="project-card__header">
+            <span class="project-card__id">P-25</span>
             <span class="project-card__meta">IN DEVELOPMENT</span>
           </div>
           <h3>Auto-Git — Git Workflow Automation</h3>
@@ -285,23 +416,19 @@
           </div>
           <a class="project-card__link" href="https://github.com/just-sil/auto-git" target="_blank" rel="noopener noreferrer">View repository ↗</a>
         </article>
-        <article data-reveal="" class="project-card">
-          <div class="project-card__header">
-            <span class="project-card__id">P-18</span>
-            <span class="project-card__meta">WORK IN PROGRESS</span>
-          </div>
-          <h3>KERALA DRIVE — 3D Driving Simulator</h3>
-          <p class="project-card__description">A browser-based driving-simulator project inspired by Kerala roads. The planned experience explores a first-person WagonR cockpit, local road layouts and junctions, and traffic behaviour using real-time 3D web graphics.</p>
-          <div class="project-card__tags">
-            <span class="project-card__tag">Three.js</span>
-            <span class="project-card__tag">WebGL</span>
-            <span class="project-card__tag">JavaScript</span>
-            <span class="project-card__tag">3D Simulation</span>
+        <article data-reveal="" class="u165">
+          <div class="u166">P-26</div>
+          <h3 class="u167">3D Printing &amp; Prototyping</h3>
+          <p class="u168">Designed and fabricated functional prototypes on an Anycubic Kobra 2 Neo — working with CAD models, PLA printing and print optimization.</p>
+          <div class="u169">
+            <span class="u170">3D Printing</span>
+            <span class="u171">CAD</span>
+            <span class="u172">PLA</span>
           </div>
         </article>
         <article data-reveal="" class="project-card">
           <div class="project-card__header">
-            <span class="project-card__id">P-19</span>
+            <span class="project-card__id">P-27</span>
             <span class="project-card__meta">HARDWARE EXPERIMENT</span>
           </div>
           <h3>ESP32-C3 LED Matrix — Snake Experiment</h3>
@@ -315,7 +442,7 @@
         </article>
         <article data-reveal="" class="project-card">
           <div class="project-card__header">
-            <span class="project-card__id">P-20</span>
+            <span class="project-card__id">P-28</span>
             <span class="project-card__meta">EARLY EXPLORATION</span>
           </div>
           <h3>DIY Pen Plotter</h3>

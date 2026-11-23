@@ -683,3 +683,18 @@ footer{border-top:1px solid var(--line);}
 
 /* Keyboard accessibility */
 :focus-visible{outline:2px solid var(--focus-color);outline-offset:3px;}
+
+/* design switch: classic ⇄ experiment */
+.view-switch{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:8px 14px;border:1px solid var(--fg);border-radius:999px;
+  background:var(--accent);color:var(--accent-ink);
+  font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:.02em;white-space:nowrap;
+  transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s ease;
+}
+.view-switch:hover{transform:translateY(-2px);box-shadow:3px 3px 0 var(--fg);}
+.view-switch:focus-visible{outline:2px solid var(--fg);outline-offset:3px;}
+@media(max-width:760px){
+  .u8{gap:12px;}
+  .view-switch{padding:7px 11px;font-size:11px;}
+}
