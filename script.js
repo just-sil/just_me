@@ -6,6 +6,13 @@ const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matc
 
 const $ = (sel, el = document) => el.querySelector(sel);
 const $$ = (sel, el = document) => [...el.querySelectorAll(sel)];
+
+/* ── design switch (classic ⇄ experiment): remember the choice ── */
+$$("[data-view]").forEach((link) =>
+  link.addEventListener("click", () => {
+    try { localStorage.setItem("cv-view", link.dataset.view); } catch (_) {}
+  })
+);
 const clamp = (v, lo = 0, hi = 1) => Math.min(hi, Math.max(lo, v));
 const smooth = (a, b, v) => {
   const t = clamp((v - a) / (b - a));
