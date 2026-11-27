@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en" data-lens="embedded">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mohamed Simal M — Embedded Systems CV</title>
+  <meta name="description" content="Embedded systems CV of Mohamed Simal M: Yocto Linux bring-up on i.MX7D, ESP32 and Raspberry Pi builds, RFID, load cells, SPI ADCs and device-to-cloud pipelines.">
+  <link rel="canonical" href="https://just-sil.github.io/just_me/embedded/">
+  <meta name="theme-color" content="#FAFAF8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0D0E0F" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Mohamed Simal M — Embedded Systems CV">
+  <meta property="og:description" content="Embedded systems CV of Mohamed Simal M: Yocto Linux bring-up on i.MX7D, ESP32 and Raspberry Pi builds, RFID, load cells, SPI ADCs and device-to-cloud pipelines.">
+  <meta property="og:url" content="https://just-sil.github.io/just_me/embedded/">
+  <meta property="og:image" content="https://just-sil.github.io/just_me/assets/og/embedded.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MSM-E · Mohamed Simal M · Embedded systems, from bootloader to sensor.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" href="https://just-sil.github.io/just_me/" title="Mohamed Simal M — Embedded, Hardware &amp; Software CV">
+  <link rel="alternate" href="https://just-sil.github.io/just_me/embedded/" title="Mohamed Simal M — Embedded Systems CV">
+  <link rel="alternate" href="https://just-sil.github.io/just_me/software/" title="Mohamed Simal M — Software Engineering CV">
+  <link rel="alternate" href="https://just-sil.github.io/just_me/hardware/" title="Mohamed Simal M — Hardware &amp; Robotics CV">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='7' y='4' width='18' height='24' rx='2' fill='%23111'/%3E%3Cpath d='M3 9h4M3 14h4M3 19h4M3 24h4M25 9h4M25 14h4M25 19h4M25 24h4' stroke='%23111' stroke-width='2'/%3E%3Ccircle cx='11' cy='8' r='1.6' fill='%23FF4D00'/%3E%3C/svg%3E">
+  <script>
+    (function () {
+      var d = document.documentElement, q = new URLSearchParams(location.search);
+      try { var t = localStorage.getItem("ds-theme"); if (t) d.dataset.theme = t; } catch (e) {}
+      d.classList.add("js");
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/datasheet.css">
+  <style>@page { @bottom-left { content: "Mohamed Simal M · MSM-E · Embedded systems variant"; font: 8pt "IBM Plex Mono", monospace; color: #6B6E72; } }</style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Mohamed Simal M","url":"https://just-sil.github.io/just_me/","image":"https://just-sil.github.io/just_me/me.jpg","email":"mailto:simalmannekkara@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Tirur","addressRegion":"Kerala","addressCountry":"IN"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Model Engineering College, Thrikkakara"},"knowsAbout":["Sensors","IoT","ESP32","Circuits","Python","Linux systems","Motion control","Arduino","Raspberry Pi","Embedded Linux","Embedded C++","Cloudflare","Robotics","Networking","Vision / OCR","JavaScript"],"sameAs":["https://github.com/just-sil","https://www.instagram.com/silman0_0/"]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar">
+  <a class="bar__brand" href="../embedded/#top" aria-label="Mohamed Simal M, MSM-E, back to top">
+    <svg class="bar__glyph" viewBox="0 0 22 26" aria-hidden="true"><path d="M1 6h4M1 11h4M1 16h4M1 21h4M17 6h4M17 11h4M17 16h4M17 21h4" stroke="currentColor" stroke-width="1.8"/><rect x="5" y="1" width="12" height="24" rx="1.5" fill="currentColor"/><circle cx="8.6" cy="4.8" r="1.5" fill="var(--accent)"/></svg>
+    <span class="bar__part">MSM-E</span>
+    <span class="bar__name">Mohamed Simal M</span>
+  </a>
+  <nav class="vn" aria-label="CV variant">
+    <span class="vn__title" aria-hidden="true">Variant</span>
+    <a href="../" data-lens-link="general"><span class="vn__part">G</span><span class="vn__label">General</span></a><a href="../embedded/" data-lens-link="embedded" aria-current="page"><span class="vn__part">E</span><span class="vn__label">Embedded</span></a><a href="../software/" data-lens-link="software"><span class="vn__part">S</span><span class="vn__label">Software</span></a><a href="../hardware/" data-lens-link="hardware"><span class="vn__part">H</span><span class="vn__label">Hardware</span></a>
+  </nav>
+  <div class="bar__actions">
+    <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle dark mode" title="Toggle dark mode"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 3a7 7 0 0 1 0 14z" fill="currentColor"/></svg></button>
+    <button class="btn btn--ghost btn--sm" type="button" data-print>PDF</button>
+    <a class="btn btn--sm" href="#contact">Contact</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="sheet">
+
+    <!-- document strip -->
+    <div class="strip" id="top" data-url="just-sil.github.io/just_me/embedded/">
+      <span class="strip__part">MSM-E</span>
+      <span class="strip__variant">Embedded systems variant</span>
+      <span class="strip__to" data-to hidden>Prepared for <b data-to-name></b></span>
+      <span class="strip__rev">Datasheet · Rev 2026.11</span>
+    </div>
+
+    <!-- title block -->
+    <section class="title" aria-labelledby="name">
+      <div class="title__text">
+        <p class="eyebrow">B.Tech CSBS · Model Engineering College · Kerala</p>
+        <h1 id="name" class="name">Mohamed Simal M</h1>
+        <p class="headline"><span>Embedded systems,</span> <span>from bootloader to sensor.</span></p>
+        <p class="summary">Brought up a custom Yocto Linux image on a locked i.MX7D Pico board. Builds ESP32 and Raspberry Pi devices that talk to the cloud, and reads the physical world through RFID, load cells and SPI ADCs.</p>
+        <div class="cta">
+          <a class="btn btn--primary" href="mailto:simalmannekkara@gmail.com">Email me</a>
+          <a class="btn" href="https://github.com/just-sil" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <button class="btn btn--ghost" type="button" data-print>Download PDF</button>
+        </div>
+
+        <div class="features">
+          <h2 class="minihead"><span class="sec__no">1</span>Features</h2>
+          <ul><li>Board bring-up: custom Yocto image on an i.MX7D Pico, from bootloader to running OS</li><li>Microcontrollers: ESP32, ESP32-C3, ESP8266 and Arduino; Raspberry Pi as an SBC</li><li>Peripherals: RFID, load cells, MCP3008 ADC, 128×64 OLED, 8×8 LED matrix</li><li>Battery-friendly device-to-cloud polling between an ESP32 and a Cloudflare Worker</li><li>Linux input stack: virtual uinput devices that work on Wayland, lock screen and TTYs</li></ul>
+        </div>
+      </div>
+
+      <div class="title__fig">
+        <figure class="chip" aria-labelledby="chip-cap">
+          <div class="chip__pkg">
+            <ol class="chip__side chip__side--l"><li><button class="pin" type="button" data-skill="sensors" data-type="HW" aria-pressed="false" aria-describedby="trace" style="--n:1"><span class="pin__lead" aria-hidden="true"></span><span class="pin__no">1</span><span class="pin__name">Sensors</span><span class="pin__count" aria-label="6 projects">×6</span></button></li><li><button class="pin" type="button" data-skill="iot" data-type="FW" aria-pressed="false" aria-describedby="trace" style="--n:2"><span class="pin__lead" aria-hidden="true"></span><span class="pin__no">2</span><span class="pin__name">IoT</span><span class="pin__count" aria-label="5 projects">×5</span></button></li><li><button class="pin" type="button" data-skill="esp32" data-type="FW" aria-pressed="false" aria-describedby="trace" style="--n:3"><span class="pin__lead" aria-hidden="true"></span><span class="pin__no">3</span><span class="pin__name">ESP32</span><span class="pin__count" aria-label="3 projects">×3</span></button></li><li><button class="pin" type="button" data-skill="circuits" data-type="HW" aria-pressed="false" aria-describedby="trace" style="--n:4"><span class="pin__lead" aria-hidden="true"></span><span class="pin__no">4</span><span class="pin__name">Circuits</span><span class="pin__count" aria-label="4 projects">×4</span></button></li><li><button class="pin" type="button" data-skill="python" data-type="SW" aria-pressed="false" aria-describedby="trace" style="--n:5"><span class="pin__lead" aria-hidden="true"></span><span class="pin__no">5</span><span class="pin__name">Python</span><span class="pin__count" aria-label="9 projects">×9</span></button></li><li><button class="pin" type="button" data-skill="linuxsys" data-type="FW" aria-pressed="false" aria-describedby="trace" style="--n:6"><span class="pin__lead" aria-hidden="true"></span><span class="pin__no">6</span><span class="pin__name">Linux systems</span><span class="pin__count" aria-label="2 projects">×2</span></button></li><li><button class="pin" type="button" data-skill="motion" data-type="HW" aria-pressed="false" aria-describedby="trace" style="--n:7"><span class="pin__lead" aria-hidden="true"></span><span class="pin__no">7</span><span class="pin__name">Motion control</span><span class="pin__count" aria-label="3 projects">×3</span></button></li><li><button class="pin" type="button" data-skill="arduino" data-type="FW" aria-pressed="false" aria-describedby="trace" style="--n:8"><span class="pin__lead" aria-hidden="true"></span><span class="pin__no">8</span><span class="pin__name">Arduino</span><span class="pin__count" aria-label="1 projects">×1</span></button></li></ol>
+            <div class="chip__body" aria-hidden="true">
+              <span class="chip__notch"></span>
+              <span class="chip__dot"></span>
+              <span class="chip__brand">SIMAL</span>
+              <span class="chip__part">MSM-E</span>
+              <span class="chip__rev">REV 26.11 · KL · IN</span>
+            </div>
+            <ol class="chip__side chip__side--r"><li><button class="pin" type="button" data-skill="rpi" data-type="FW" aria-pressed="false" aria-describedby="trace" style="--n:9"><span class="pin__lead" aria-hidden="true"></span><span class="pin__no">9</span><span class="pin__name">Raspberry Pi</span><span class="pin__count" aria-label="1 projects">×1</span></button></li><li><button class="pin" type="button" data-skill="emblinux" data-type="FW" aria-pressed="false" aria-describedby="trace" style="--n:10"><span class="pin__lead" aria-hidden="true"></span><span class="pin__no">10</span><span class="pin__name">Embedded Linux</span><span class="pin__count" aria-label="1 projects">×1</span></button></li><li><button class="pin" type="button" data-skill="cpp" data-type="FW" aria-pressed="false" aria-describedby="trace" style="--n:11"><span class="pin__lead" aria-hidden="true"></span><span class="pin__no">11</span><span class="pin__name">Embedded C++</span><span class="pin__count" aria-label="1 projects">×1</span></button></li><li><button class="pin" type="button" data-skill="cloud" data-type="SW" aria-pressed="false" aria-describedby="trace" style="--n:12"><span class="pin__lead" aria-hidden="true"></span><span class="pin__no">12</span><span class="pin__name">Cloudflare</span><span class="pin__count" aria-label="3 projects">×3</span></button></li><li><button class="pin" type="button" data-skill="robotics" data-type="HW" aria-pressed="false" aria-describedby="trace" style="--n:13"><span class="pin__lead" aria-hidden="true"></span><span class="pin__no">13</span><span class="pin__name">Robotics</span><span class="pin__count" aria-label="2 projects">×2</span></button></li><li><button class="pin" type="button" data-skill="net" data-type="SW" aria-pressed="false" aria-describedby="trace" style="--n:14"><span class="pin__lead" aria-hidden="true"></span><span class="pin__no">14</span><span class="pin__name">Networking</span><span class="pin__count" aria-label="2 projects">×2</span></button></li><li><button class="pin" type="button" data-skill="cv" data-type="AI" aria-pressed="false" aria-describedby="trace" style="--n:15"><span class="pin__lead" aria-hidden="true"></span><span class="pin__no">15</span><span class="pin__name">Vision / OCR</span><span class="pin__count" aria-label="2 projects">×2</span></button></li><li><button class="pin" type="button" data-skill="js" data-type="SW" aria-pressed="false" aria-describedby="trace" style="--n:16"><span class="pin__lead" aria-hidden="true"></span><span class="pin__no">16</span><span class="pin__name">JavaScript</span><span class="pin__count" aria-label="6 projects">×6</span></button></li></ol>
+          </div>
+          <figcaption id="chip-cap"><span class="figno">Figure 1</span> Pin configuration, top view. Each pin is a skill; select one to trace the projects that use it.</figcaption>
+          <p class="trace" id="trace" aria-live="polite"><span class="trace__idle">16 pins · 28 projects · select a pin</span></p>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 2 key specs -->
+    <section class="sec" aria-labelledby="specs">
+      <header class="sec__head">
+        <h2 id="specs"><span class="sec__no">2</span>Key specifications</h2>
+        <span class="sec__run" aria-hidden="true">MSM-E · Rev 2026.11</span>
+        
+      </header>
+      <table class="spec">
+        <thead><tr><th scope="col">Parameter</th><th scope="col">Value</th><th scope="col">Conditions / notes</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Projects built</th><td class="spec__v">28</td><td>Embedded 11 · Hardware 14 · Software 17 · AI 6</td></tr>
+          <tr><th scope="row">State-level recognitions</th><td class="spec__v">4</td><td>Including a win at the Young Innovators Programme</td></tr>
+          <tr><th scope="row">Live or released builds</th><td class="spec__v">4</td><td>Usable today, linked below</td></tr>
+          <tr><th scope="row">Targets</th><td class="spec__v">i.MX7D · ESP32 · ESP32-C3 · ESP8266 · Arduino · Raspberry Pi</td><td>MPU, MCU and SBC</td></tr>
+          <tr><th scope="row">Interfaces</th><td class="spec__v">RFID · load cell · MCP3008 ADC · OLED · LED matrix · Wi-Fi</td><td>Plus Linux uinput</td></tr>
+          <tr><th scope="row">Class 12, Science</th><td class="spec__v">95%</td><td>Higher Secondary</td></tr>
+          <tr><th scope="row">Education</th><td class="spec__v">B.Tech CSBS</td><td>Model Engineering College · in progress</td></tr>
+          <tr><th scope="row">Location</th><td class="spec__v">Kerala, India</td><td>IST, UTC+05:30 · <span class="clock" data-clock>--:--</span> now</td></tr>
+          <tr><th scope="row">Status</th><td class="spec__v">Available to learn</td><td>Internships, projects and collaborations</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 3 typical applications -->
+    <section class="sec" aria-labelledby="apps">
+      <header class="sec__head">
+        <h2 id="apps"><span class="sec__no">3</span>Typical applications</h2>
+        <span class="sec__run" aria-hidden="true">MSM-E · Rev 2026.11</span>
+        <p class="sec__sub">The six builds that best fit this variant, with how each one works.</p>
+      </header>
+      <div class="apps">
+        <article class="app" id="app-P-06" data-skills="emblinux linuxsys">
+          <header class="app__head">
+            <span class="app__id">P-06</span>
+            <span class="app__status">Board bring-up</span>
+            <span class="fit" role="img" aria-label="Relevance 3 of 3"><i class="on"></i><i class="on"></i><i class="on"></i></span>
+          </header>
+          <h3 class="app__title">Yocto Linux on i.MX7D Pico</h3>
+          <p class="app__sub">Board bring-up from scratch</p>
+          <p class="app__desc">Cracked a locked i.MX7D Pico board and built a custom embedded Linux image from scratch with the Yocto Project: a full board bring-up, from bootloader to running OS.</p>
+          <figure class="app__fig"><ol class="flow" aria-label="Functional block diagram"><li>Locked board</li><li>Bootloader</li><li>Yocto image</li><li>Running Linux</li></ol><figcaption><span class="figno">Figure 2</span> Yocto Linux on i.MX7D Pico functional block diagram</figcaption></figure>
+          <footer class="app__foot">
+            <ul class="stack"><li>Embedded Linux</li><li>Yocto</li><li>i.MX7D</li><li>Board bring-up</li></ul>
+            
+          </footer>
+        </article>
+        <article class="app" id="app-P-09" data-skills="esp32 cloud sensors iot">
+          <header class="app__head">
+            <span class="app__id">P-09</span>
+            <span class="app__status">Hardware + cloud</span>
+            <span class="fit" role="img" aria-label="Relevance 3 of 3"><i class="on"></i><i class="on"></i><i class="on"></i></span>
+          </header>
+          <h3 class="app__title">Telegram → ESP32 OLED</h3>
+          <p class="app__sub">Messages, photos and video on a 128×64 display</p>
+          <p class="app__desc">Send a message, photo or short video to a Telegram bot and it appears on a tiny 128×64 OLED. A Cloudflare Worker stores the latest message, an ffmpeg service converts media into dithered 1-bit frames, and the battery-friendly ESP32 checks in every few minutes.</p>
+          <figure class="app__fig"><ol class="flow" aria-label="Functional block diagram"><li>Telegram bot</li><li>CF Worker</li><li>ffmpeg → 1-bit</li><li>ESP32 · OLED</li></ol><figcaption><span class="figno">Figure 3</span> Telegram → ESP32 OLED functional block diagram</figcaption></figure>
+          <footer class="app__foot">
+            <ul class="stack"><li>ESP32</li><li>Cloudflare Workers</li><li>ffmpeg</li><li>Telegram bot</li></ul>
+            <a class="app__link" href="https://github.com/just-sil/pathiribot" target="_blank" rel="noopener noreferrer">Repository <span aria-hidden="true">↗</span></a>
+          </footer>
+        </article>
+        <article class="app" id="app-P-03" data-skills="arduino sensors circuits">
+          <header class="app__head">
+            <span class="app__id">P-03</span>
+            <span class="app__status">State level ×2</span>
+            <span class="fit" role="img" aria-label="Relevance 3 of 3"><i class="on"></i><i class="on"></i><i class="on"></i></span>
+          </header>
+          <h3 class="app__title">EasyRation</h3>
+          <p class="app__sub">Digital ration management for the PDS</p>
+          <p class="app__desc">A ration-management system for India&#39;s Public Distribution System. RFID identifies the beneficiary, load sensors measure what is dispensed, and a mobile app ties it together for transparent tracking. Presented at state level in INSPIRE-MANAK and the Kerala School Science Fair.</p>
+          <figure class="app__fig"><ol class="flow" aria-label="Functional block diagram"><li>RFID card</li><li>Arduino</li><li>Load cell</li><li>Mobile app</li></ol><figcaption><span class="figno">Figure 4</span> EasyRation functional block diagram</figcaption></figure>
+          <footer class="app__foot">
+            <ul class="stack"><li>Arduino</li><li>RFID</li><li>Load sensors</li><li>Mobile app</li></ul>
+            
+          </footer>
+        </article>
+        <article class="app" id="app-P-21" data-skills="rpi python sensors">
+          <header class="app__head">
+            <span class="app__id">P-21</span>
+            <span class="app__status">Raspberry Pi build</span>
+            <span class="fit" role="img" aria-label="Relevance 3 of 3"><i class="on"></i><i class="on"></i><i class="on"></i></span>
+          </header>
+          <h3 class="app__title">Potentiometer Radio</h3>
+          <p class="app__sub">A retro dial on a Raspberry Pi</p>
+          <p class="app__desc">Turning a potentiometer, read through an MCP3008 ADC, tunes between Music, AI and Standby bands like a real dial. The music band plays local tracks or streams from the Audius API through VLC; the AI band is next.</p>
+          <figure class="app__fig"><ol class="flow" aria-label="Functional block diagram"><li>Potentiometer</li><li>MCP3008 ADC</li><li>Raspberry Pi</li><li>Band → VLC</li></ol><figcaption><span class="figno">Figure 5</span> Potentiometer Radio functional block diagram</figcaption></figure>
+          <footer class="app__foot">
+            <ul class="stack"><li>Raspberry Pi</li><li>Python</li><li>MCP3008</li><li>Audius API</li></ul>
+            <a class="app__link" href="https://github.com/just-sil/the-faah-radio" target="_blank" rel="noopener noreferrer">Repository <span aria-hidden="true">↗</span></a>
+          </footer>
+        </article>
+        <article class="app" id="app-P-11" data-skills="python linuxsys net">
+          <header class="app__head">
+            <span class="app__id">P-11</span>
+            <span class="app__status">Daily driver</span>
+            <span class="fit" role="img" aria-label="Relevance 2 of 3"><i class="on"></i><i class="on"></i><i></i></span>
+          </header>
+          <h3 class="app__title">anykey</h3>
+          <p class="app__sub">One keyboard, two computers</p>
+          <p class="app__desc">A software KVM that shares one keyboard and mouse between a Windows PC and a Fedora laptop with a hotkey. Low-level Windows hooks forward input over HMAC-authenticated TCP to virtual uinput devices, so it works on Wayland, the lock screen and TTYs. Standard library only.</p>
+          <figure class="app__fig"><ol class="flow" aria-label="Functional block diagram"><li>Win32 hooks</li><li>HMAC · TCP</li><li>uinput device</li><li>Wayland / TTY</li></ol><figcaption><span class="figno">Figure 6</span> anykey functional block diagram</figcaption></figure>
+          <footer class="app__foot">
+            <ul class="stack"><li>Python</li><li>Win32 hooks</li><li>Linux uinput</li><li>TCP</li></ul>
+            
+          </footer>
+        </article>
+        <article class="app" id="app-P-02" data-skills="robotics iot motion sensors">
+          <header class="app__head">
+            <span class="app__id">P-02</span>
+            <span class="app__status">YIP state-level winner</span>
+            <span class="fit" role="img" aria-label="Relevance 2 of 3"><i class="on"></i><i class="on"></i><i></i></span>
+          </header>
+          <h3 class="app__title">MOT — Medicine On Time</h3>
+          <p class="app__sub">Healthcare robot for elderly care</p>
+          <p class="app__desc">A healthcare robot that makes sure elderly people take their medicine on time, with reminders and automated restocking so medicine is always available. State-level winner at Kerala Startup Mission&#39;s Young Innovators Programme.</p>
+          <figure class="app__fig"><ol class="flow" aria-label="Functional block diagram"><li>Schedule</li><li>Reminder</li><li>Dispense</li><li>Auto-restock</li></ol><figcaption><span class="figno">Figure 7</span> MOT functional block diagram</figcaption></figure>
+          <footer class="app__foot">
+            <ul class="stack"><li>Robotics</li><li>IoT</li><li>Healthcare</li><li>Automation</li></ul>
+            
+          </footer>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4 index -->
+    <section class="sec" aria-labelledby="index">
+      <header class="sec__head">
+        <h2 id="index"><span class="sec__no">4</span>Application index</h2>
+        <span class="sec__run" aria-hidden="true">MSM-E · Rev 2026.11</span>
+        <p class="sec__sub">All 28 projects, most relevant to this variant first. Select a row to read more.</p>
+      </header>
+      <div class="filters" role="group" aria-label="Filter projects by domain">
+        <button type="button" class="filter" data-filter="all" aria-pressed="true">All <small>28</small></button>
+        <button type="button" class="filter" data-filter="embedded" aria-pressed="false">Embedded <small>11</small></button>
+        <button type="button" class="filter" data-filter="hardware" aria-pressed="false">Hardware <small>14</small></button>
+        <button type="button" class="filter" data-filter="software" aria-pressed="false">Software <small>17</small></button>
+        <button type="button" class="filter" data-filter="ai" aria-pressed="false">AI <small>6</small></button>
+        <p class="filters__note" data-pin-note hidden></p>
+      </div>
+      <div class="table-wrap">
+        <table class="idx">
+          <thead><tr><th scope="col">ID</th><th scope="col">Project</th><th scope="col">Domain</th><th scope="col">Stack</th><th scope="col">Status</th><th scope="col"><abbr title="Relevance to this variant">Fit</abbr></th></tr></thead>
+          <tbody>
+            <tr id="P-06" data-skills="emblinux linuxsys" data-domain="embedded hardware" class="is-featured">
+              <td class="c-id">P-06</td>
+              <th scope="row" class="c-name"><span class="c-title">Yocto Linux on i.MX7D Pico</span><span class="c-sub">Board bring-up from scratch</span><span class="c-desc">Cracked a locked i.MX7D Pico board and built a custom embedded Linux image from scratch with the Yocto Project: a full board bring-up, from bootloader to running OS.</span></th>
+              <td class="c-dom">Embedded · Hardware</td>
+              <td class="c-stack">Embedded Linux · Yocto · i.MX7D · Board bring-up</td>
+              <td class="c-status">Board bring-up</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 3 of 3"><i class="on"></i><i class="on"></i><i class="on"></i></span></td>
+            </tr>
+            <tr id="P-09" data-skills="esp32 cloud sensors iot" data-domain="embedded software hardware" class="is-featured">
+              <td class="c-id">P-09</td>
+              <th scope="row" class="c-name"><span class="c-title"><a href="https://github.com/just-sil/pathiribot" target="_blank" rel="noopener noreferrer">Telegram → ESP32 OLED <span aria-hidden="true">↗</span></a></span><span class="c-sub">Messages, photos and video on a 128×64 display</span><span class="c-desc">Send a message, photo or short video to a Telegram bot and it appears on a tiny 128×64 OLED. A Cloudflare Worker stores the latest message, an ffmpeg service converts media into dithered 1-bit frames, and the battery-friendly ESP32 checks in every few minutes.</span></th>
+              <td class="c-dom">Embedded · Software · Hardware</td>
+              <td class="c-stack">ESP32 · Cloudflare Workers · ffmpeg · Telegram bot</td>
+              <td class="c-status">Hardware + cloud</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 3 of 3"><i class="on"></i><i class="on"></i><i class="on"></i></span></td>
+            </tr>
+            <tr id="P-03" data-skills="arduino sensors circuits" data-domain="hardware embedded" class="is-featured">
+              <td class="c-id">P-03</td>
+              <th scope="row" class="c-name"><span class="c-title">EasyRation</span><span class="c-sub">Digital ration management for the PDS</span><span class="c-desc">A ration-management system for India&#39;s Public Distribution System. RFID identifies the beneficiary, load sensors measure what is dispensed, and a mobile app ties it together for transparent tracking. Presented at state level in INSPIRE-MANAK and the Kerala School Science Fair.</span></th>
+              <td class="c-dom">Hardware · Embedded</td>
+              <td class="c-stack">Arduino · RFID · Load sensors · Mobile app</td>
+              <td class="c-status">State level ×2</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 3 of 3"><i class="on"></i><i class="on"></i><i class="on"></i></span></td>
+            </tr>
+            <tr id="P-21" data-skills="rpi python sensors" data-domain="embedded hardware" class="is-featured">
+              <td class="c-id">P-21</td>
+              <th scope="row" class="c-name"><span class="c-title"><a href="https://github.com/just-sil/the-faah-radio" target="_blank" rel="noopener noreferrer">Potentiometer Radio <span aria-hidden="true">↗</span></a></span><span class="c-sub">A retro dial on a Raspberry Pi</span><span class="c-desc">Turning a potentiometer, read through an MCP3008 ADC, tunes between Music, AI and Standby bands like a real dial. The music band plays local tracks or streams from the Audius API through VLC; the AI band is next.</span></th>
+              <td class="c-dom">Embedded · Hardware</td>
+              <td class="c-stack">Raspberry Pi · Python · MCP3008 · Audius API</td>
+              <td class="c-status">Raspberry Pi build</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 3 of 3"><i class="on"></i><i class="on"></i><i class="on"></i></span></td>
+            </tr>
+            <tr id="P-11" data-skills="python linuxsys net" data-domain="software embedded" class="is-featured">
+              <td class="c-id">P-11</td>
+              <th scope="row" class="c-name"><span class="c-title">anykey</span><span class="c-sub">One keyboard, two computers</span><span class="c-desc">A software KVM that shares one keyboard and mouse between a Windows PC and a Fedora laptop with a hotkey. Low-level Windows hooks forward input over HMAC-authenticated TCP to virtual uinput devices, so it works on Wayland, the lock screen and TTYs. Standard library only.</span></th>
+              <td class="c-dom">Software · Embedded</td>
+              <td class="c-stack">Python · Win32 hooks · Linux uinput · TCP</td>
+              <td class="c-status">Daily driver</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 2 of 3"><i class="on"></i><i class="on"></i><i></i></span></td>
+            </tr>
+            <tr id="P-02" data-skills="robotics iot motion sensors" data-domain="hardware embedded" class="is-featured">
+              <td class="c-id">P-02</td>
+              <th scope="row" class="c-name"><span class="c-title">MOT — Medicine On Time</span><span class="c-sub">Healthcare robot for elderly care</span><span class="c-desc">A healthcare robot that makes sure elderly people take their medicine on time, with reminders and automated restocking so medicine is always available. State-level winner at Kerala Startup Mission&#39;s Young Innovators Programme.</span></th>
+              <td class="c-dom">Hardware · Embedded</td>
+              <td class="c-stack">Robotics · IoT · Healthcare · Automation</td>
+              <td class="c-status">YIP state-level winner</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 2 of 3"><i class="on"></i><i class="on"></i><i></i></span></td>
+            </tr>
+            <tr id="P-27" data-skills="esp32 cpp" data-domain="embedded hardware">
+              <td class="c-id">P-27</td>
+              <th scope="row" class="c-name"><span class="c-title">ESP32-C3 LED Matrix</span><span class="c-sub">Snake on an 8×8 display</span><span class="c-desc">An 8×8 LED matrix driven by an ESP32-C3, with WLED set up and a Snake-style game explored for the compact display.</span></th>
+              <td class="c-dom">Embedded · Hardware</td>
+              <td class="c-stack">ESP32-C3 · LED matrix · WLED · Embedded C++</td>
+              <td class="c-status">Hardware experiment</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 3 of 3"><i class="on"></i><i class="on"></i><i class="on"></i></span></td>
+            </tr>
+            <tr id="P-10" data-skills="esp32 iot sensors" data-domain="embedded hardware">
+              <td class="c-id">P-10</td>
+              <th scope="row" class="c-name"><span class="c-title">Smart Room Automation</span><span class="c-sub">Lighting, appliances and monitoring</span><span class="c-desc">A smart-room system integrating IoT devices for automated lighting, appliance control and environmental monitoring, built on ESP32 and ESP8266 with remote control. Presented at state level in the Young Innovators Programme.</span></th>
+              <td class="c-dom">Embedded · Hardware</td>
+              <td class="c-stack">ESP32 / ESP8266 · IoT · Automation</td>
+              <td class="c-status">YIP state level</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 2 of 3"><i class="on"></i><i class="on"></i><i></i></span></td>
+            </tr>
+            <tr id="P-14" data-skills="iot sensors" data-domain="hardware embedded ai">
+              <td class="c-id">P-14</td>
+              <th scope="row" class="c-name"><span class="c-title">AI Smart Farming</span><span class="c-sub">Precision agriculture</span><span class="c-desc">An AI-assisted precision-agriculture system: environmental monitoring, automation and data-driven crop management to raise productivity and cut manual work.</span></th>
+              <td class="c-dom">Hardware · Embedded · AI</td>
+              <td class="c-stack">AI · IoT · Agriculture</td>
+              <td class="c-status">Prototype</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 2 of 3"><i class="on"></i><i class="on"></i><i></i></span></td>
+            </tr>
+            <tr id="P-18" data-skills="robotics motion circuits" data-domain="hardware embedded">
+              <td class="c-id">P-18</td>
+              <th scope="row" class="c-name"><span class="c-title">Solar Panel Cleaner</span><span class="c-sub">Autonomous cleaning mechanism</span><span class="c-desc">An autonomous solar-panel cleaning mechanism that keeps panels efficient and cuts manual maintenance, using motorised cleaning and embedded control.</span></th>
+              <td class="c-dom">Hardware · Embedded</td>
+              <td class="c-stack">Robotics · Embedded control · Solar</td>
+              <td class="c-status">Prototype</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 2 of 3"><i class="on"></i><i class="on"></i><i></i></span></td>
+            </tr>
+            <tr id="P-22" data-skills="iot" data-domain="hardware embedded ai">
+              <td class="c-id">P-22</td>
+              <th scope="row" class="c-name"><span class="c-title">Kaida</span><span class="c-sub">Pocket voice AI assistant</span><span class="c-desc">A pocket-sized AI chatbot with voice: talk to it naturally and have it control the smart room hands-free, from anywhere.</span></th>
+              <td class="c-dom">Hardware · Embedded · AI</td>
+              <td class="c-stack">AI · Voice · IoT · Portable</td>
+              <td class="c-status">Prototype</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 2 of 3"><i class="on"></i><i class="on"></i><i></i></span></td>
+            </tr>
+            <tr id="P-28" data-skills="motion circuits" data-domain="hardware">
+              <td class="c-id">P-28</td>
+              <th scope="row" class="c-name"><span class="c-title">DIY Pen Plotter</span><span class="c-sub">Drawings into pen movement</span><span class="c-desc">An exploratory pen-plotter build that turns digital drawings into physical pen movement, focused on simple motion control and reusing available components.</span></th>
+              <td class="c-dom">Hardware</td>
+              <td class="c-stack">Electronics · Stepper motors · Motion control</td>
+              <td class="c-status">Early exploration</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 2 of 3"><i class="on"></i><i class="on"></i><i></i></span></td>
+            </tr>
+            <tr id="P-15" data-skills="python cv" data-domain="software ai">
+              <td class="c-id">P-15</td>
+              <th scope="row" class="c-name"><span class="c-title">Contactless Attendance</span><span class="c-sub">Face-recognition attendance device</span><span class="c-desc">A contactless attendance device that uses OpenCV face recognition to register attendance with a timestamp. No touch or card needed.</span></th>
+              <td class="c-dom">Software · AI</td>
+              <td class="c-stack">Python · OpenCV · Face recognition</td>
+              <td class="c-status">Prototype</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 1 of 3"><i class="on"></i><i></i><i></i></span></td>
+            </tr>
+            <tr id="P-19" data-skills="python net" data-domain="software">
+              <td class="c-id">P-19</td>
+              <th scope="row" class="c-name"><span class="c-title">RTSP CCTV Monitoring</span><span class="c-sub">Multi-camera IP surveillance</span><span class="c-desc">A multi-camera IP surveillance viewer built with Python and VLC, with RTSP streams configured for smooth simultaneous viewing.</span></th>
+              <td class="c-dom">Software</td>
+              <td class="c-stack">Python · VLC · RTSP</td>
+              <td class="c-status">Tool</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 1 of 3"><i class="on"></i><i></i><i></i></span></td>
+            </tr>
+            <tr id="P-01" data-skills="js wasm python" data-domain="software" class="is-extra">
+              <td class="c-id">P-01</td>
+              <th scope="row" class="c-name"><span class="c-title"><a href="https://just-sil.github.io/code_roof/" target="_blank" rel="noopener noreferrer">CodeRoof <span aria-hidden="true">↗</span></a></span><span class="c-sub">Interactive learn-to-code platform</span><span class="c-desc">A learn-to-code platform built solo in vanilla HTML, CSS and JS, with no frameworks and no backend. 24 lessons across Programming Basics and Vibe Coding &amp; Prompt Engineering, each ending in exercises that auto-grade in the browser: a hand-built simulated bash and Git terminal with its own virtual file system, and real Python execution through Pyodide.</span></th>
+              <td class="c-dom">Software</td>
+              <td class="c-stack">Vanilla JS · WebAssembly / Pyodide · EdTech · Auto-grading</td>
+              <td class="c-status">Live · solo build</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 0 of 3"><i></i><i></i><i></i></span></td>
+            </tr>
+            <tr id="P-04" data-skills="flutter sql llm flask python" data-domain="software ai" class="is-extra">
+              <td class="c-id">P-04</td>
+              <th scope="row" class="c-name"><span class="c-title"><a href="https://github.com/just-sil/expense_tracker" target="_blank" rel="noopener noreferrer">Chillara <span aria-hidden="true">↗</span></a></span><span class="c-sub">Offline-first AI expense tracker</span><span class="c-desc">Log a spend in plain words like “24 tea” on your phone, even offline. When it syncs over USB or Wi-Fi, a self-hosted LLM on the laptop extracts amount, category and date into PostgreSQL. Daily limits and weekly summaries, with nothing sent to the cloud.</span></th>
+              <td class="c-dom">Software · AI</td>
+              <td class="c-stack">Flutter · SQLite · Ollama · Qwen3:8b · Flask · PostgreSQL</td>
+              <td class="c-status">Released · Android APK</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 0 of 3"><i></i><i></i><i></i></span></td>
+            </tr>
+            <tr id="P-05" data-skills="js three" data-domain="software" class="is-extra">
+              <td class="c-id">P-05</td>
+              <th scope="row" class="c-name"><span class="c-title"><a href="https://github.com/just-sil/eg-sim" target="_blank" rel="noopener noreferrer">EG Sim <span aria-hidden="true">↗</span></a></span><span class="c-sub">Projection-of-solids playground</span><span class="c-desc">A drafting playground for KTU Engineering Graphics (Module 2). Draw projections on a snapping drafting sheet with exact input, follow step-by-step ghost constructions, get progressive hints and auto-checked answers, and inspect each stage of the solid in 3D.</span></th>
+              <td class="c-dom">Software</td>
+              <td class="c-stack">JavaScript · Three.js · Canvas · EdTech</td>
+              <td class="c-status">New</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 0 of 3"><i></i><i></i><i></i></span></td>
+            </tr>
+            <tr id="P-07" data-skills="js node" data-domain="software" class="is-extra">
+              <td class="c-id">P-07</td>
+              <th scope="row" class="c-name"><span class="c-title"><a href="https://github.com/just-sil/cospo" target="_blank" rel="noopener noreferrer">Woolly Run 2 <span aria-hidden="true">↗</span></a></span><span class="c-sub">Sheep platformer for the web</span><span class="c-desc">A canvas platformer: 20 levels across 5 themed worlds, an endless Woolly Rush mode, a coin economy with a shop, daily rewards and leaderboards. All graphics and sound are generated in code, with Supabase handling login and validating every coin server-side.</span></th>
+              <td class="c-dom">Software</td>
+              <td class="c-stack">JavaScript · Canvas · WebAudio · Supabase · Node.js</td>
+              <td class="c-status">Playable · in development</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 0 of 3"><i></i><i></i><i></i></span></td>
+            </tr>
+            <tr id="P-08" data-skills="js cloud" data-domain="software" class="is-extra">
+              <td class="c-id">P-08</td>
+              <th scope="row" class="c-name"><span class="c-title"><a href="https://gitglow.pages.dev/" target="_blank" rel="noopener noreferrer">GitGlow <span aria-hidden="true">↗</span></a></span><span class="c-sub">GitHub receipt generator</span><span class="c-desc">A web app that turns GitHub profile activity into a customisable, receipt-style visual, giving developer activity a playful, shareable format.</span></th>
+              <td class="c-dom">Software</td>
+              <td class="c-stack">JavaScript · GitHub · Cloudflare Workers</td>
+              <td class="c-status">Live · Cloudflare</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 0 of 3"><i></i><i></i><i></i></span></td>
+            </tr>
+            <tr id="P-12" data-skills="js circuits" data-domain="software hardware" class="is-extra">
+              <td class="c-id">P-12</td>
+              <th scope="row" class="c-name"><span class="c-title"><a href="https://just-sil.github.io/sim-lab/" target="_blank" rel="noopener noreferrer">Circuits Lab <span aria-hidden="true">↗</span></a></span><span class="c-sub">Zener diode characteristics simulator</span><span class="c-desc">A virtual physics lab for the Zener diode experiment. Wire the circuit yourself with live feedback on each connection, then run the simulation, move the rheostat, record readings and plot the characteristic curve, all in the browser.</span></th>
+              <td class="c-dom">Software · Hardware</td>
+              <td class="c-stack">JavaScript · Simulation · Electronics · EdTech</td>
+              <td class="c-status">Live</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 0 of 3"><i></i><i></i><i></i></span></td>
+            </tr>
+            <tr id="P-13" data-skills="node sql cloud" data-domain="software" class="is-extra">
+              <td class="c-id">P-13</td>
+              <th scope="row" class="c-name"><span class="c-title"><a href="https://github.com/just-sil/stickverse" target="_blank" rel="noopener noreferrer">Stick Verse <span aria-hidden="true">↗</span></a></span><span class="c-sub">Private WhatsApp sticker sharing</span><span class="c-desc">A site for sharing WhatsApp stickers in private groups: admin-approved membership, packs auto-converted to 512×512 WebP, likes and super likes, and a top-contributors board. Exposed safely through a Cloudflare Tunnel that sends the public link to Telegram.</span></th>
+              <td class="c-dom">Software</td>
+              <td class="c-stack">Node.js · Express · SQLite · Cloudflare Tunnel</td>
+              <td class="c-status">Self-hosted</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 0 of 3"><i></i><i></i><i></i></span></td>
+            </tr>
+            <tr id="P-16" data-skills="python flask cv" data-domain="software ai" class="is-extra">
+              <td class="c-id">P-16</td>
+              <th scope="row" class="c-name"><span class="c-title">KEAM Rank Analyzer</span><span class="c-sub">OCR score calculation</span><span class="c-desc">A Python and Flask application that reads KEAM response sheets with OCR and automates score calculation.</span></th>
+              <td class="c-dom">Software · AI</td>
+              <td class="c-stack">Python · Flask · OCR</td>
+              <td class="c-status">Tool</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 0 of 3"><i></i><i></i><i></i></span></td>
+            </tr>
+            <tr id="P-17" data-skills="react llm" data-domain="software ai" class="is-extra">
+              <td class="c-id">P-17</td>
+              <th scope="row" class="c-name"><span class="c-title"><a href="https://github.com/just-sil/hello_kitty" target="_blank" rel="noopener noreferrer">Hello Kitty <span aria-hidden="true">↗</span></a></span><span class="c-sub">Local AI desktop companion</span><span class="c-desc">A desktop companion overlay built with React and Tauri, connected to a locally running Ollama model (Qwen3:8b): a lightweight desktop interface for a local AI assistant.</span></th>
+              <td class="c-dom">Software · AI</td>
+              <td class="c-stack">React · Tauri · Ollama · Qwen3:8b</td>
+              <td class="c-status">Prototype</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 0 of 3"><i></i><i></i><i></i></span></td>
+            </tr>
+            <tr id="P-20" data-skills="python sql" data-domain="software" class="is-extra">
+              <td class="c-id">P-20</td>
+              <th scope="row" class="c-name"><span class="c-title">RankRack</span><span class="c-sub">Student ranking platform</span><span class="c-desc">A ranking platform that organises marks and generates ranked results, making student performance easy to track and compare.</span></th>
+              <td class="c-dom">Software</td>
+              <td class="c-stack">Web · Python · Database</td>
+              <td class="c-status">Tool</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 0 of 3"><i></i><i></i><i></i></span></td>
+            </tr>
+            <tr id="P-23" data-skills="three js" data-domain="software" class="is-extra">
+              <td class="c-id">P-23</td>
+              <th scope="row" class="c-name"><span class="c-title"><a href="https://github.com/just-sil/kerala-drive" target="_blank" rel="noopener noreferrer">Kerala Drive <span aria-hidden="true">↗</span></a></span><span class="c-sub">3D driving simulator</span><span class="c-desc">A browser driving simulator inspired by Kerala roads, exploring a first-person WagonR cockpit, local road layouts and junctions, and traffic behaviour in real-time 3D.</span></th>
+              <td class="c-dom">Software</td>
+              <td class="c-stack">Three.js · WebGL · JavaScript</td>
+              <td class="c-status">Work in progress</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 0 of 3"><i></i><i></i><i></i></span></td>
+            </tr>
+            <tr id="P-24" data-skills="fab" data-domain="software hardware" class="is-extra">
+              <td class="c-id">P-24</td>
+              <th scope="row" class="c-name"><span class="c-title">PrintDaddy</span><span class="c-sub">On-demand 3D printing service</span><span class="c-desc">A web platform for an on-demand 3D-printing service where visitors browse, submit print jobs online and get them fabricated.</span></th>
+              <td class="c-dom">Software · Hardware</td>
+              <td class="c-stack">Web · Full-stack · 3D printing</td>
+              <td class="c-status">In progress</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 0 of 3"><i></i><i></i><i></i></span></td>
+            </tr>
+            <tr id="P-25" data-skills="git python" data-domain="software" class="is-extra">
+              <td class="c-id">P-25</td>
+              <th scope="row" class="c-name"><span class="c-title"><a href="https://github.com/just-sil/auto-git" target="_blank" rel="noopener noreferrer">Auto-Git <span aria-hidden="true">↗</span></a></span><span class="c-sub">Git workflow automation</span><span class="c-desc">A file-watcher that automates a Git-based file handoff, using a commit-message__filename.ext convention to keep the intended commit message separate from the filename.</span></th>
+              <td class="c-dom">Software</td>
+              <td class="c-stack">Git · Automation · File watcher</td>
+              <td class="c-status">In development</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 0 of 3"><i></i><i></i><i></i></span></td>
+            </tr>
+            <tr id="P-26" data-skills="fab" data-domain="hardware" class="is-extra">
+              <td class="c-id">P-26</td>
+              <th scope="row" class="c-name"><span class="c-title">3D Printing &amp; Prototyping</span><span class="c-sub">Functional printed parts</span><span class="c-desc">Designs and fabricates functional prototypes on an Anycubic Kobra 2 Neo: CAD models, PLA printing and print optimisation.</span></th>
+              <td class="c-dom">Hardware</td>
+              <td class="c-stack">3D printing · CAD · PLA</td>
+              <td class="c-status">Ongoing</td>
+              <td class="c-fit"><span class="fit" role="img" aria-label="Relevance 0 of 3"><i></i><i></i><i></i></span></td>
+            </tr>
+            <tr class="idx__more" data-more hidden><td colspan="6"><button type="button" class="more-btn" aria-expanded="false">Show 14 more, outside this variant's focus</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 5 pin descriptions -->
+    <section class="sec" aria-labelledby="pins">
+      <header class="sec__head">
+        <h2 id="pins"><span class="sec__no">5</span>Pin descriptions</h2>
+        <span class="sec__run" aria-hidden="true">MSM-E · Rev 2026.11</span>
+        <p class="sec__sub">Skills, each backed by the projects that use it. No self-rated bars.</p>
+      </header>
+      <table class="pintab">
+        <thead><tr><th scope="col">Pin</th><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Description</th><th scope="col">Used in</th></tr></thead>
+        <tbody>
+          <tr data-skill-row="sensors"><td class="c-id">1</td><th scope="row">Sensors</th><td><span class="type type--HW">Hardware</span></td><td>RFID, load cells, ADCs, displays</td><td class="refs"><a href="#P-02">P-02</a> <a href="#P-03">P-03</a> <a href="#P-09">P-09</a> <a href="#P-10">P-10</a> <a href="#P-14">P-14</a> <a href="#P-21">P-21</a></td></tr>
+          <tr data-skill-row="iot"><td class="c-id">2</td><th scope="row">IoT</th><td><span class="type type--FW">Firmware</span></td><td>Connected devices and remote control</td><td class="refs"><a href="#P-02">P-02</a> <a href="#P-09">P-09</a> <a href="#P-10">P-10</a> <a href="#P-14">P-14</a> <a href="#P-22">P-22</a></td></tr>
+          <tr data-skill-row="esp32"><td class="c-id">3</td><th scope="row">ESP32</th><td><span class="type type--FW">Firmware</span></td><td>ESP32, ESP32-C3 and ESP8266 boards</td><td class="refs"><a href="#P-09">P-09</a> <a href="#P-10">P-10</a> <a href="#P-27">P-27</a></td></tr>
+          <tr data-skill-row="circuits"><td class="c-id">4</td><th scope="row">Circuits</th><td><span class="type type--HW">Hardware</span></td><td>Circuit design and electronics</td><td class="refs"><a href="#P-03">P-03</a> <a href="#P-12">P-12</a> <a href="#P-18">P-18</a> <a href="#P-28">P-28</a></td></tr>
+          <tr data-skill-row="python"><td class="c-id">5</td><th scope="row">Python</th><td><span class="type type--SW">Software</span></td><td>Tools, servers, automation and vision</td><td class="refs"><a href="#P-01">P-01</a> <a href="#P-04">P-04</a> <a href="#P-11">P-11</a> <a href="#P-15">P-15</a> <a href="#P-16">P-16</a> <a href="#P-19">P-19</a> <a href="#P-20">P-20</a> <a href="#P-21">P-21</a> <a href="#P-25">P-25</a></td></tr>
+          <tr data-skill-row="linuxsys"><td class="c-id">6</td><th scope="row">Linux systems</th><td><span class="type type--FW">Firmware</span></td><td>uinput, input devices, TTYs, Wayland</td><td class="refs"><a href="#P-06">P-06</a> <a href="#P-11">P-11</a></td></tr>
+          <tr data-skill-row="motion"><td class="c-id">7</td><th scope="row">Motion control</th><td><span class="type type--HW">Hardware</span></td><td>Motors, steppers and mechanisms</td><td class="refs"><a href="#P-02">P-02</a> <a href="#P-18">P-18</a> <a href="#P-28">P-28</a></td></tr>
+          <tr data-skill-row="arduino"><td class="c-id">8</td><th scope="row">Arduino</th><td><span class="type type--FW">Firmware</span></td><td>Arduino-based controllers</td><td class="refs"><a href="#P-03">P-03</a></td></tr>
+          <tr data-skill-row="rpi"><td class="c-id">9</td><th scope="row">Raspberry Pi</th><td><span class="type type--FW">Firmware</span></td><td>Raspberry Pi with GPIO and SPI peripherals</td><td class="refs"><a href="#P-21">P-21</a></td></tr>
+          <tr data-skill-row="emblinux"><td class="c-id">10</td><th scope="row">Embedded Linux</th><td><span class="type type--FW">Firmware</span></td><td>Yocto images and board bring-up</td><td class="refs"><a href="#P-06">P-06</a></td></tr>
+          <tr data-skill-row="cpp"><td class="c-id">11</td><th scope="row">Embedded C++</th><td><span class="type type--FW">Firmware</span></td><td>Firmware for microcontrollers</td><td class="refs"><a href="#P-27">P-27</a></td></tr>
+          <tr data-skill-row="cloud"><td class="c-id">12</td><th scope="row">Cloudflare</th><td><span class="type type--SW">Software</span></td><td>Workers, Pages and Tunnels</td><td class="refs"><a href="#P-08">P-08</a> <a href="#P-09">P-09</a> <a href="#P-13">P-13</a></td></tr>
+          <tr data-skill-row="robotics"><td class="c-id">13</td><th scope="row">Robotics</th><td><span class="type type--HW">Hardware</span></td><td>Mechanisms, actuators and automation</td><td class="refs"><a href="#P-02">P-02</a> <a href="#P-18">P-18</a></td></tr>
+          <tr data-skill-row="net"><td class="c-id">14</td><th scope="row">Networking</th><td><span class="type type--SW">Software</span></td><td>TCP, RTSP streams, HMAC auth</td><td class="refs"><a href="#P-11">P-11</a> <a href="#P-19">P-19</a></td></tr>
+          <tr data-skill-row="cv"><td class="c-id">15</td><th scope="row">Vision / OCR</th><td><span class="type type--AI">AI</span></td><td>OpenCV, face recognition, OCR</td><td class="refs"><a href="#P-15">P-15</a> <a href="#P-16">P-16</a></td></tr>
+          <tr data-skill-row="js"><td class="c-id">16</td><th scope="row">JavaScript</th><td><span class="type type--SW">Software</span></td><td>Vanilla JS apps, Canvas and WebAudio</td><td class="refs"><a href="#P-01">P-01</a> <a href="#P-05">P-05</a> <a href="#P-07">P-07</a> <a href="#P-08">P-08</a> <a href="#P-12">P-12</a> <a href="#P-23">P-23</a></td></tr>
+        </tbody>
+      </table>
+      <p class="also"><span>Also:</span> 3D print / CAD · Three.js · WebAssembly · Flask · Node.js · SQL · Flutter · React / Tauri · Git · Local LLMs</p>
+    </section>
+
+    <!-- 6 recognition -->
+    <section class="sec" aria-labelledby="recognition">
+      <header class="sec__head">
+        <h2 id="recognition"><span class="sec__no">6</span>Recognition</h2>
+        <span class="sec__run" aria-hidden="true">MSM-E · Rev 2026.11</span>
+        
+      </header>
+      <table class="rev">
+        <thead><tr><th scope="col">Level</th><th scope="col">Programme</th><th scope="col">Notes</th><th scope="col">Ref.</th></tr></thead>
+        <tbody>
+          <tr><td class="rev__lvl">State · winner</td><th scope="row">Young Innovators Programme (YIP)<span>Kerala Startup Mission</span></th><td>Reached state level twice: with Smart Room automation, then won at state level with MOT (Medicine On Time).</td><td class="refs"><a href="#P-02">P-02</a> <a href="#P-10">P-10</a></td></tr>
+          <tr><td class="rev__lvl">State</td><th scope="row">INSPIRE Awards — MANAK<span>Government of India</span></th><td>Selected to state level presenting EasyRation, an engineering solution for the Public Distribution System.</td><td class="refs"><a href="#P-03">P-03</a></td></tr>
+          <tr><td class="rev__lvl">State · 2024–25</td><th scope="row">Kerala School Science Fair<span>Kerala</span></th><td>Reached state level presenting EasyRation as an engineering and technology innovation.</td><td class="refs"><a href="#P-03">P-03</a></td></tr>
+          <tr><td class="rev__lvl">Winner</td><th scope="row">Code-a-Pookalam<span>TinkerHub</span></th><td>Won the school-students category by designing a traditional Onam pookalam entirely in code.</td><td class="refs">—</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 7 about -->
+    <section class="sec" aria-labelledby="about">
+      <header class="sec__head">
+        <h2 id="about"><span class="sec__no">7</span>Application notes</h2>
+        <span class="sec__run" aria-hidden="true">MSM-E · Rev 2026.11</span>
+        
+      </header>
+      <div class="about">
+        <figure class="about__photo">
+          <img src="../me.jpg" alt="Mohamed Simal M, smiling outdoors by the sea" width="1444" height="1444" loading="lazy" decoding="async">
+          <figcaption><span class="figno">Figure 8</span> Mohamed Simal M, Tirur, Kerala</figcaption>
+        </figure>
+        <div class="about__text">
+          <p>I&#39;m a Computer Science and Business Systems student at Model Engineering College, Thrikkakara, from Tirur in Malappuram, Kerala.</p>
+          <p>I&#39;m drawn to projects where software meets the physical world: connected devices, useful automation and AI applied to practical problems. I learn best by making things, testing them, breaking them and improving them. Away from the bench I take photographs.</p>
+          <blockquote class="quote"><p>“Skill is the product of curiosity and interest.”</p></blockquote>
+          <h3 class="minihead no-print">Method</h3>
+          <ol class="method no-print"><li><span>01</span>Start with a problem</li><li><span>02</span>Explore possible solutions</li><li><span>03</span>Build, test and refine</li></ol>
+          <h3 class="minihead">Education</h3>
+          <table class="edu">
+            <tbody>
+              <tr><td class="edu__when">Current</td><th scope="row">B.Tech, Computer Science &amp; Business Systems<span>Model Engineering College, Thrikkakara</span></th><td class="edu__grade">In progress</td></tr>
+              <tr><td class="edu__when">Completed</td><th scope="row">Higher Secondary, Science (Class 12)<span>Kerala</span></th><td class="edu__grade">95%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 ordering information -->
+    <section class="sec sec--order" aria-labelledby="ordering">
+      <header class="sec__head">
+        <h2 id="ordering"><span class="sec__no">8</span>Ordering information</h2>
+        <span class="sec__run" aria-hidden="true">MSM-E · Rev 2026.11</span>
+        <p class="sec__sub">Every variant describes the same person. Only the order and emphasis change.</p>
+      </header>
+      <table class="order">
+        <thead><tr><th scope="col">Part number</th><th scope="col">Variant</th><th scope="col">Best for</th><th scope="col">Link</th></tr></thead>
+        <tbody>
+          <tr><th scope="row"><a href="../" data-lens-link="general">MSM-G</a></th><td>General-purpose builder</td><td>Generalist, R&amp;D and maker roles</td><td><div class="order__url"><code>just-sil.github.io/just_me/</code><button class="copy" type="button" data-copy="https://just-sil.github.io/just_me/" aria-label="Copy link to MSM-G">Copy</button></div></td></tr>
+          <tr class="is-current"><th scope="row"><a href="../embedded/" data-lens-link="embedded">MSM-E</a><span class="this">this document</span></th><td>Embedded systems variant</td><td>Embedded, firmware, IoT and embedded Linux roles</td><td><div class="order__url"><code>just-sil.github.io/just_me/embedded/</code><button class="copy" type="button" data-copy="https://just-sil.github.io/just_me/embedded/" aria-label="Copy link to MSM-E">Copy</button></div></td></tr>
+          <tr><th scope="row"><a href="../software/" data-lens-link="software">MSM-S</a></th><td>Software engineering variant</td><td>Software, full-stack, tooling and applied-AI roles</td><td><div class="order__url"><code>just-sil.github.io/just_me/software/</code><button class="copy" type="button" data-copy="https://just-sil.github.io/just_me/software/" aria-label="Copy link to MSM-S">Copy</button></div></td></tr>
+          <tr><th scope="row"><a href="../hardware/" data-lens-link="hardware">MSM-H</a></th><td>Hardware &amp; robotics variant</td><td>Hardware, electronics, robotics and product-prototyping roles</td><td><div class="order__url"><code>just-sil.github.io/just_me/hardware/</code><button class="copy" type="button" data-copy="https://just-sil.github.io/just_me/hardware/" aria-label="Copy link to MSM-H">Copy</button></div></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 9 contact -->
+    <section class="sec contact" id="contact" aria-labelledby="contact-h">
+      <header class="sec__head">
+        <h2 id="contact-h"><span class="sec__no">9</span>Contact</h2>
+        <span class="sec__run" aria-hidden="true">MSM-E · Rev 2026.11</span>
+        
+      </header>
+      <div class="contact__body">
+        <p class="contact__lead">Have a role, a project or a question about electronics? Write to me.</p>
+        <a class="contact__mail" href="mailto:simalmannekkara@gmail.com">simalmannekkara@gmail.com</a>
+        <ul class="contact__links">
+          <li><a href="https://github.com/just-sil" target="_blank" rel="noopener noreferrer"><span>GitHub</span><span class="h">just-sil</span></a></li>
+          <li><a href="https://wa.me/+919633302482" target="_blank" rel="noopener noreferrer"><span>WhatsApp</span><span class="h">+91 96333 02482</span></a></li>
+          <li><a href="https://www.instagram.com/silman0_0/" target="_blank" rel="noopener noreferrer"><span>Instagram</span><span class="h">silman0_0</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="foot">
+  <span>MSM-E · Datasheet rev. 2026.11 · Hand-built in HTML, CSS and JS</span>
+  <span>Other designs: <a href="../classic/">Classic</a> · <a href="../experiment/">Experiment</a></span>
+  <span>© <span data-year>2026</span> Mohamed Simal M</span>
+</footer>
+
+<div class="toast" role="status" aria-live="polite" data-toast></div>
+<script src="../assets/datasheet.js" defer></script>
+</body>
+</html>

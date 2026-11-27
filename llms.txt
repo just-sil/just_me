@@ -1,0 +1,48 @@
+# Mohamed Simal M
+
+> CS & Business Systems student at Model Engineering College, Kerala. Twenty-eight projects across embedded systems, electronics and software, and a state-level win at the Young Innovators Programme.
+
+Location: Tirur, Kerala, India. Studying B.Tech, Computer Science & Business Systems at Model Engineering College, Thrikkakara. Contact: simalmannekkara@gmail.com.
+
+## Role-specific CVs
+- [MSM-G: General-purpose builder](https://just-sil.github.io/just_me/): Generalist, R&D and maker roles
+- [MSM-E: Embedded systems variant](https://just-sil.github.io/just_me/embedded/): Embedded, firmware, IoT and embedded Linux roles
+- [MSM-S: Software engineering variant](https://just-sil.github.io/just_me/software/): Software, full-stack, tooling and applied-AI roles
+- [MSM-H: Hardware & robotics variant](https://just-sil.github.io/just_me/hardware/): Hardware, electronics, robotics and product-prototyping roles
+- [JSON Resume](https://just-sil.github.io/just_me/resume.json)
+
+## Recognition
+- Young Innovators Programme (YIP) (State · winner): Reached state level twice: with Smart Room automation, then won at state level with MOT (Medicine On Time).
+- INSPIRE Awards — MANAK (State): Selected to state level presenting EasyRation, an engineering solution for the Public Distribution System.
+- Kerala School Science Fair (State · 2024–25): Reached state level presenting EasyRation as an engineering and technology innovation.
+- Code-a-Pookalam (Winner): Won the school-students category by designing a traditional Onam pookalam entirely in code.
+
+## Projects
+- P-01 CodeRoof: A learn-to-code platform built solo in vanilla HTML, CSS and JS, with no frameworks and no backend. 24 lessons across Programming Basics and Vibe Coding & Prompt Engineering, each ending in exercises that auto-grade in the browser: a hand-built simulated bash and Git terminal with its own virtual file system, and real Python execution through Pyodide. [Vanilla JS, WebAssembly / Pyodide, EdTech, Auto-grading] https://just-sil.github.io/code_roof/
+- P-02 MOT — Medicine On Time: A healthcare robot that makes sure elderly people take their medicine on time, with reminders and automated restocking so medicine is always available. State-level winner at Kerala Startup Mission's Young Innovators Programme. [Robotics, IoT, Healthcare, Automation]
+- P-03 EasyRation: A ration-management system for India's Public Distribution System. RFID identifies the beneficiary, load sensors measure what is dispensed, and a mobile app ties it together for transparent tracking. Presented at state level in INSPIRE-MANAK and the Kerala School Science Fair. [Arduino, RFID, Load sensors, Mobile app]
+- P-04 Chillara: Log a spend in plain words like “24 tea” on your phone, even offline. When it syncs over USB or Wi-Fi, a self-hosted LLM on the laptop extracts amount, category and date into PostgreSQL. Daily limits and weekly summaries, with nothing sent to the cloud. [Flutter, SQLite, Ollama · Qwen3:8b, Flask, PostgreSQL] https://github.com/just-sil/expense_tracker
+- P-05 EG Sim: A drafting playground for KTU Engineering Graphics (Module 2). Draw projections on a snapping drafting sheet with exact input, follow step-by-step ghost constructions, get progressive hints and auto-checked answers, and inspect each stage of the solid in 3D. [JavaScript, Three.js, Canvas, EdTech] https://github.com/just-sil/eg-sim
+- P-06 Yocto Linux on i.MX7D Pico: Cracked a locked i.MX7D Pico board and built a custom embedded Linux image from scratch with the Yocto Project: a full board bring-up, from bootloader to running OS. [Embedded Linux, Yocto, i.MX7D, Board bring-up]
+- P-07 Woolly Run 2: A canvas platformer: 20 levels across 5 themed worlds, an endless Woolly Rush mode, a coin economy with a shop, daily rewards and leaderboards. All graphics and sound are generated in code, with Supabase handling login and validating every coin server-side. [JavaScript, Canvas, WebAudio, Supabase, Node.js] https://github.com/just-sil/cospo
+- P-08 GitGlow: A web app that turns GitHub profile activity into a customisable, receipt-style visual, giving developer activity a playful, shareable format. [JavaScript, GitHub, Cloudflare Workers] https://gitglow.pages.dev/
+- P-09 Telegram → ESP32 OLED: Send a message, photo or short video to a Telegram bot and it appears on a tiny 128×64 OLED. A Cloudflare Worker stores the latest message, an ffmpeg service converts media into dithered 1-bit frames, and the battery-friendly ESP32 checks in every few minutes. [ESP32, Cloudflare Workers, ffmpeg, Telegram bot] https://github.com/just-sil/pathiribot
+- P-10 Smart Room Automation: A smart-room system integrating IoT devices for automated lighting, appliance control and environmental monitoring, built on ESP32 and ESP8266 with remote control. Presented at state level in the Young Innovators Programme. [ESP32 / ESP8266, IoT, Automation]
+- P-11 anykey: A software KVM that shares one keyboard and mouse between a Windows PC and a Fedora laptop with a hotkey. Low-level Windows hooks forward input over HMAC-authenticated TCP to virtual uinput devices, so it works on Wayland, the lock screen and TTYs. Standard library only. [Python, Win32 hooks, Linux uinput, TCP]
+- P-12 Circuits Lab: A virtual physics lab for the Zener diode experiment. Wire the circuit yourself with live feedback on each connection, then run the simulation, move the rheostat, record readings and plot the characteristic curve, all in the browser. [JavaScript, Simulation, Electronics, EdTech] https://just-sil.github.io/sim-lab/
+- P-13 Stick Verse: A site for sharing WhatsApp stickers in private groups: admin-approved membership, packs auto-converted to 512×512 WebP, likes and super likes, and a top-contributors board. Exposed safely through a Cloudflare Tunnel that sends the public link to Telegram. [Node.js, Express, SQLite, Cloudflare Tunnel] https://github.com/just-sil/stickverse
+- P-14 AI Smart Farming: An AI-assisted precision-agriculture system: environmental monitoring, automation and data-driven crop management to raise productivity and cut manual work. [AI, IoT, Agriculture]
+- P-15 Contactless Attendance: A contactless attendance device that uses OpenCV face recognition to register attendance with a timestamp. No touch or card needed. [Python, OpenCV, Face recognition]
+- P-16 KEAM Rank Analyzer: A Python and Flask application that reads KEAM response sheets with OCR and automates score calculation. [Python, Flask, OCR]
+- P-17 Hello Kitty: A desktop companion overlay built with React and Tauri, connected to a locally running Ollama model (Qwen3:8b): a lightweight desktop interface for a local AI assistant. [React, Tauri, Ollama, Qwen3:8b] https://github.com/just-sil/hello_kitty
+- P-18 Solar Panel Cleaner: An autonomous solar-panel cleaning mechanism that keeps panels efficient and cuts manual maintenance, using motorised cleaning and embedded control. [Robotics, Embedded control, Solar]
+- P-19 RTSP CCTV Monitoring: A multi-camera IP surveillance viewer built with Python and VLC, with RTSP streams configured for smooth simultaneous viewing. [Python, VLC, RTSP]
+- P-20 RankRack: A ranking platform that organises marks and generates ranked results, making student performance easy to track and compare. [Web, Python, Database]
+- P-21 Potentiometer Radio: Turning a potentiometer, read through an MCP3008 ADC, tunes between Music, AI and Standby bands like a real dial. The music band plays local tracks or streams from the Audius API through VLC; the AI band is next. [Raspberry Pi, Python, MCP3008, Audius API] https://github.com/just-sil/the-faah-radio
+- P-22 Kaida: A pocket-sized AI chatbot with voice: talk to it naturally and have it control the smart room hands-free, from anywhere. [AI, Voice, IoT, Portable]
+- P-23 Kerala Drive: A browser driving simulator inspired by Kerala roads, exploring a first-person WagonR cockpit, local road layouts and junctions, and traffic behaviour in real-time 3D. [Three.js, WebGL, JavaScript] https://github.com/just-sil/kerala-drive
+- P-24 PrintDaddy: A web platform for an on-demand 3D-printing service where visitors browse, submit print jobs online and get them fabricated. [Web, Full-stack, 3D printing]
+- P-25 Auto-Git: A file-watcher that automates a Git-based file handoff, using a commit-message__filename.ext convention to keep the intended commit message separate from the filename. [Git, Automation, File watcher] https://github.com/just-sil/auto-git
+- P-26 3D Printing & Prototyping: Designs and fabricates functional prototypes on an Anycubic Kobra 2 Neo: CAD models, PLA printing and print optimisation. [3D printing, CAD, PLA]
+- P-27 ESP32-C3 LED Matrix: An 8×8 LED matrix driven by an ESP32-C3, with WLED set up and a Snake-style game explored for the compact display. [ESP32-C3, LED matrix, WLED, Embedded C++]
+- P-28 DIY Pen Plotter: An exploratory pen-plotter build that turns digital drawings into physical pen movement, focused on simple motion control and reusing available components. [Electronics, Stepper motors, Motion control]
