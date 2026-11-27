@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="styles.css">
   <script>
     // Visitors who picked the experimental design last time go straight back to it.
-    try { if (localStorage.getItem("cv-view") === "experiment") location.replace("experiment/"); } catch (_) {}
+    try { if (localStorage.getItem("cv-view") === "experiment") location.replace("../experiment/"); } catch (_) {}
   </script>
 </head>
 <body>
@@ -40,7 +40,7 @@
         <a href="#education" class="u15">Education</a>
         <a href="#contact" class="u16">Contact</a>
       </div>
-      <a href="experiment/" class="view-switch" data-view="experiment" title="Switch to the experimental 3D design">✦ Experiment view</a>
+      <a href="../experiment/" class="view-switch" data-view="experiment" title="Switch to the experimental 3D design">✦ Experiment view</a>
     </nav>
 
     <!-- hero -->
@@ -57,7 +57,7 @@
       <div data-hero="" class="u27">
         <div class="u28">
           <div class="u29"></div>
-          <img id="msm-photo" src="me.jpg" alt="Mohamed Simal M" class="profile-photo">
+          <img id="msm-photo" src="../me.jpg" alt="Mohamed Simal M" class="profile-photo">
           <div class="u30">available to learn</div>
         </div>
       </div>
