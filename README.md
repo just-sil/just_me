@@ -89,6 +89,40 @@ An AI-assisted precision-agriculture concept focused on environmental monitoring
 
 I'm interested in the overlap between embedded systems, connected devices, useful automation, AI, and creative software. I also enjoy photography and exploring how visual ideas can complement technical work.
 
+## Role-specific CVs
+
+The site is built like a component datasheet, and each role gets its own "part number":
+
+| Part | For | Link |
+|---|---|---|
+| MSM-G | Generalist, R&D, maker roles | [just-sil.github.io/just_me/](https://just-sil.github.io/just_me/) |
+| MSM-E | Embedded, firmware, IoT, embedded Linux | [just-sil.github.io/just_me/embedded/](https://just-sil.github.io/just_me/embedded/) |
+| MSM-S | Software, full-stack, tooling, applied AI | [just-sil.github.io/just_me/software/](https://just-sil.github.io/just_me/software/) |
+| MSM-H | Hardware, electronics, robotics | [just-sil.github.io/just_me/hardware/](https://just-sil.github.io/just_me/hardware/) |
+
+Each variant reorders the projects, skills and headline for that role, and has its own link-preview card.
+
+**URL tricks**
+
+- `?to=Bosch` stamps "Prepared for Bosch" on the page, in the tab title and on the printed PDF.
+  The stamp follows the visitor when they switch variants.
+  Example: `just-sil.github.io/just_me/embedded/?to=Bosch`
+- `?for=embedded` (or `software`, `hardware`) on the root URL redirects to that variant, so `/?for=hardware&to=Acme` works too.
+- The **PDF** button (or Ctrl+P) prints the current variant as a 3–4 page A4 CV.
+
+Earlier designs are kept at [`/classic/`](https://just-sil.github.io/just_me/classic/) and [`/experiment/`](https://just-sil.github.io/just_me/experiment/).
+
+**Editing**
+
+All content lives in [`src/data.mjs`](src/data.mjs). After editing it, regenerate the pages with Node 18+ (no dependencies):
+
+```sh
+node src/build.mjs
+```
+
+This rewrites `index.html`, `embedded/`, `software/`, `hardware/`, `resume.json` and `llms.txt`. Commit them along with the data change.
+The link-preview cards in `assets/og/` only need regenerating if a headline or URL changes (`node src/og.mjs`, which needs Playwright).
+
 ## Get in Touch
 
 - **Email:** [simalmannekkara@gmail.com](mailto:simalmannekkara@gmail.com)
