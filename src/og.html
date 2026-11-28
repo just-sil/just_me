@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+  Link-preview card template (1200×630). Open as src/og.html?lens=embedded
+  over a local server and screenshot the #card element to assets/og/<lens>.png.
+  `node src/og.mjs` does this for every lens if Playwright is installed.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OG card</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; background: #FAFAF8; }
+  #card {
+    position: relative; width: 1200px; height: 630px; box-sizing: border-box; overflow: hidden;
+    padding: 56px 64px; background: #FAFAF8; color: #111213;
+    font-family: "IBM Plex Sans", sans-serif;
+    display: grid; grid-template-columns: 1fr 360px; gap: 48px;
+  }
+  .strip { grid-column: 1 / -1; display: flex; gap: 24px; align-items: baseline; padding-bottom: 14px; border-bottom: 4px solid #111213;
+    font: 500 20px "IBM Plex Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #45474A; }
+  .strip b { color: #111213; font-weight: 600; font-size: 24px; }
+  .strip span:last-child { margin-left: auto; }
+  .name { margin: 8px 0 0; font: 700 104px/.88 "IBM Plex Sans Condensed", sans-serif; letter-spacing: -.025em; text-transform: uppercase; }
+  .headline { margin: 28px 0 0; font: 500 38px/1.15 "IBM Plex Sans", sans-serif; letter-spacing: -.015em; }
+  .headline span { display: block; }
+  .headline span + span { color: #45474A; }
+  .url { position: absolute; left: 64px; bottom: 44px; font: 500 20px "IBM Plex Mono", monospace; color: #6B6E72; }
+  .url i { font-style: normal; display: inline-block; width: 12px; height: 12px; background: #FF4D00; margin-right: 12px; }
+  .chip { align-self: center; display: grid; grid-template-columns: 1fr 120px 1fr; height: 380px; }
+  .side { display: flex; flex-direction: column; justify-content: space-around; padding: 18px 0; }
+  .side i { display: block; height: 14px; background: #A9ABAE; }
+  .side.l i { margin-left: 40%; border-radius: 3px 0 0 3px; }
+  .side.r i { margin-right: 40%; border-radius: 0 3px 3px 0; }
+  .side i.on { background: #FF4D00; }
+  .body { position: relative; background: #18191B; border-radius: 6px; display: grid; place-items: center; }
+  .body::before { content: ""; position: absolute; top: -1px; left: 50%; width: 34px; height: 17px; translate: -50% 0; border-radius: 0 0 17px 17px; background: #FAFAF8; }
+  .body::after { content: ""; position: absolute; top: 22px; left: 18px; width: 12px; height: 12px; border-radius: 50%; background: #FF4D00; }
+  .body b { writing-mode: vertical-rl; color: #E9E9E6; font: 600 46px "IBM Plex Mono", monospace; letter-spacing: .06em; }
+</style>
+</head>
+<body>
+<div id="card">
+  <div class="strip"><b data-part></b><span data-variant></span><span>Datasheet · CV</span></div>
+  <div>
+    <h1 class="name" data-name></h1>
+    <p class="headline" data-headline></p>
+  </div>
+  <div class="chip" aria-hidden="true">
+    <div class="side l" data-l></div>
+    <div class="body"><b data-part></b></div>
+    <div class="side r" data-r></div>
+  </div>
+  <p class="url"><i></i><span data-url></span></p>
+</div>
+<script type="module">
+  import { site, person, lenses } from "./data.mjs";
+  const key = new URLSearchParams(location.search).get("lens") || "general";
+  const L = lenses[key];
+  document.querySelectorAll("[data-part]").forEach((el) => (el.textContent = L.part));
+  document.querySelector("[data-variant]").textContent = L.variant;
+  document.querySelector("[data-name]").innerHTML = person.name.replace(/ (?=Simal)/, "<br>");
+  const h = document.querySelector("[data-headline]");
+  L.headline.forEach((line) => { const s = document.createElement("span"); s.textContent = line; h.append(s); });
+  document.querySelector("[data-url]").textContent = (site.url + L.path).replace(/^https:\/\//, "");
+  // Eight leads per side; the first three light up as a nod to the active pins.
+  for (const side of ["l", "r"]) {
+    const el = document.querySelector(`[data-${side}]`);
+    for (let i = 0; i < 8; i++) {
+      const lead = document.createElement("i");
+      if (side === "l" && i < 3) lead.className = "on";
+      el.append(lead);
+    }
+  }
+  document.fonts.ready.then(() => document.body.setAttribute("data-ready", ""));
+</script>
+</body>
+</html>

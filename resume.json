@@ -1,0 +1,392 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Mohamed Simal M",
+    "label": "Embedded, hardware and software builder",
+    "image": "https://just-sil.github.io/just_me/me.jpg",
+    "email": "simalmannekkara@gmail.com",
+    "url": "https://just-sil.github.io/just_me/",
+    "summary": "CS & Business Systems student at Model Engineering College, Kerala. Twenty-eight projects across embedded systems, electronics and software, and a state-level win at the Young Innovators Programme.",
+    "location": {
+      "city": "Tirur",
+      "region": "Kerala",
+      "countryCode": "IN"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "just-sil",
+        "url": "https://github.com/just-sil"
+      },
+      {
+        "network": "Instagram",
+        "username": "silman0_0",
+        "url": "https://www.instagram.com/silman0_0/"
+      }
+    ]
+  },
+  "education": [
+    {
+      "institution": "Model Engineering College, Thrikkakara",
+      "area": "Computer Science and Business Systems",
+      "studyType": "B.Tech"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Young Innovators Programme (YIP)",
+      "awarder": "Kerala Startup Mission",
+      "summary": "State · winner. Reached state level twice: with Smart Room automation, then won at state level with MOT (Medicine On Time)."
+    },
+    {
+      "title": "INSPIRE Awards — MANAK",
+      "awarder": "Government of India",
+      "summary": "State. Selected to state level presenting EasyRation, an engineering solution for the Public Distribution System."
+    },
+    {
+      "title": "Kerala School Science Fair",
+      "awarder": "Kerala",
+      "summary": "State · 2024–25. Reached state level presenting EasyRation as an engineering and technology innovation."
+    },
+    {
+      "title": "Code-a-Pookalam",
+      "awarder": "TinkerHub",
+      "summary": "Winner. Won the school-students category by designing a traditional Onam pookalam entirely in code."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Firmware",
+      "keywords": [
+        "ESP32",
+        "Arduino",
+        "Raspberry Pi",
+        "Embedded Linux",
+        "Embedded C++",
+        "Linux systems",
+        "IoT"
+      ]
+    },
+    {
+      "name": "Hardware",
+      "keywords": [
+        "Sensors",
+        "Robotics",
+        "Motion control",
+        "Circuits",
+        "3D print / CAD"
+      ]
+    },
+    {
+      "name": "Software",
+      "keywords": [
+        "Python",
+        "JavaScript",
+        "Three.js",
+        "WebAssembly",
+        "Flask",
+        "Node.js",
+        "SQL",
+        "Cloudflare",
+        "Flutter",
+        "React / Tauri",
+        "Networking",
+        "Git"
+      ]
+    },
+    {
+      "name": "AI",
+      "keywords": [
+        "Local LLMs",
+        "Vision / OCR"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "CodeRoof",
+      "description": "A learn-to-code platform built solo in vanilla HTML, CSS and JS, with no frameworks and no backend. 24 lessons across Programming Basics and Vibe Coding & Prompt Engineering, each ending in exercises that auto-grade in the browser: a hand-built simulated bash and Git terminal with its own virtual file system, and real Python execution through Pyodide.",
+      "keywords": [
+        "Vanilla JS",
+        "WebAssembly / Pyodide",
+        "EdTech",
+        "Auto-grading"
+      ],
+      "url": "https://just-sil.github.io/code_roof/"
+    },
+    {
+      "name": "MOT — Medicine On Time",
+      "description": "A healthcare robot that makes sure elderly people take their medicine on time, with reminders and automated restocking so medicine is always available. State-level winner at Kerala Startup Mission's Young Innovators Programme.",
+      "keywords": [
+        "Robotics",
+        "IoT",
+        "Healthcare",
+        "Automation"
+      ]
+    },
+    {
+      "name": "EasyRation",
+      "description": "A ration-management system for India's Public Distribution System. RFID identifies the beneficiary, load sensors measure what is dispensed, and a mobile app ties it together for transparent tracking. Presented at state level in INSPIRE-MANAK and the Kerala School Science Fair.",
+      "keywords": [
+        "Arduino",
+        "RFID",
+        "Load sensors",
+        "Mobile app"
+      ]
+    },
+    {
+      "name": "Chillara",
+      "description": "Log a spend in plain words like “24 tea” on your phone, even offline. When it syncs over USB or Wi-Fi, a self-hosted LLM on the laptop extracts amount, category and date into PostgreSQL. Daily limits and weekly summaries, with nothing sent to the cloud.",
+      "keywords": [
+        "Flutter",
+        "SQLite",
+        "Ollama · Qwen3:8b",
+        "Flask",
+        "PostgreSQL"
+      ],
+      "url": "https://github.com/just-sil/expense_tracker"
+    },
+    {
+      "name": "EG Sim",
+      "description": "A drafting playground for KTU Engineering Graphics (Module 2). Draw projections on a snapping drafting sheet with exact input, follow step-by-step ghost constructions, get progressive hints and auto-checked answers, and inspect each stage of the solid in 3D.",
+      "keywords": [
+        "JavaScript",
+        "Three.js",
+        "Canvas",
+        "EdTech"
+      ],
+      "url": "https://github.com/just-sil/eg-sim"
+    },
+    {
+      "name": "Yocto Linux on i.MX7D Pico",
+      "description": "Cracked a locked i.MX7D Pico board and built a custom embedded Linux image from scratch with the Yocto Project: a full board bring-up, from bootloader to running OS.",
+      "keywords": [
+        "Embedded Linux",
+        "Yocto",
+        "i.MX7D",
+        "Board bring-up"
+      ]
+    },
+    {
+      "name": "Woolly Run 2",
+      "description": "A canvas platformer: 20 levels across 5 themed worlds, an endless Woolly Rush mode, a coin economy with a shop, daily rewards and leaderboards. All graphics and sound are generated in code, with Supabase handling login and validating every coin server-side.",
+      "keywords": [
+        "JavaScript",
+        "Canvas",
+        "WebAudio",
+        "Supabase",
+        "Node.js"
+      ],
+      "url": "https://github.com/just-sil/cospo"
+    },
+    {
+      "name": "GitGlow",
+      "description": "A web app that turns GitHub profile activity into a customisable, receipt-style visual, giving developer activity a playful, shareable format.",
+      "keywords": [
+        "JavaScript",
+        "GitHub",
+        "Cloudflare Workers"
+      ],
+      "url": "https://gitglow.pages.dev/"
+    },
+    {
+      "name": "Telegram → ESP32 OLED",
+      "description": "Send a message, photo or short video to a Telegram bot and it appears on a tiny 128×64 OLED. A Cloudflare Worker stores the latest message, an ffmpeg service converts media into dithered 1-bit frames, and the battery-friendly ESP32 checks in every few minutes.",
+      "keywords": [
+        "ESP32",
+        "Cloudflare Workers",
+        "ffmpeg",
+        "Telegram bot"
+      ],
+      "url": "https://github.com/just-sil/pathiribot"
+    },
+    {
+      "name": "Smart Room Automation",
+      "description": "A smart-room system integrating IoT devices for automated lighting, appliance control and environmental monitoring, built on ESP32 and ESP8266 with remote control. Presented at state level in the Young Innovators Programme.",
+      "keywords": [
+        "ESP32 / ESP8266",
+        "IoT",
+        "Automation"
+      ]
+    },
+    {
+      "name": "anykey",
+      "description": "A software KVM that shares one keyboard and mouse between a Windows PC and a Fedora laptop with a hotkey. Low-level Windows hooks forward input over HMAC-authenticated TCP to virtual uinput devices, so it works on Wayland, the lock screen and TTYs. Standard library only.",
+      "keywords": [
+        "Python",
+        "Win32 hooks",
+        "Linux uinput",
+        "TCP"
+      ]
+    },
+    {
+      "name": "Circuits Lab",
+      "description": "A virtual physics lab for the Zener diode experiment. Wire the circuit yourself with live feedback on each connection, then run the simulation, move the rheostat, record readings and plot the characteristic curve, all in the browser.",
+      "keywords": [
+        "JavaScript",
+        "Simulation",
+        "Electronics",
+        "EdTech"
+      ],
+      "url": "https://just-sil.github.io/sim-lab/"
+    },
+    {
+      "name": "Stick Verse",
+      "description": "A site for sharing WhatsApp stickers in private groups: admin-approved membership, packs auto-converted to 512×512 WebP, likes and super likes, and a top-contributors board. Exposed safely through a Cloudflare Tunnel that sends the public link to Telegram.",
+      "keywords": [
+        "Node.js",
+        "Express",
+        "SQLite",
+        "Cloudflare Tunnel"
+      ],
+      "url": "https://github.com/just-sil/stickverse"
+    },
+    {
+      "name": "AI Smart Farming",
+      "description": "An AI-assisted precision-agriculture system: environmental monitoring, automation and data-driven crop management to raise productivity and cut manual work.",
+      "keywords": [
+        "AI",
+        "IoT",
+        "Agriculture"
+      ]
+    },
+    {
+      "name": "Contactless Attendance",
+      "description": "A contactless attendance device that uses OpenCV face recognition to register attendance with a timestamp. No touch or card needed.",
+      "keywords": [
+        "Python",
+        "OpenCV",
+        "Face recognition"
+      ]
+    },
+    {
+      "name": "KEAM Rank Analyzer",
+      "description": "A Python and Flask application that reads KEAM response sheets with OCR and automates score calculation.",
+      "keywords": [
+        "Python",
+        "Flask",
+        "OCR"
+      ]
+    },
+    {
+      "name": "Hello Kitty",
+      "description": "A desktop companion overlay built with React and Tauri, connected to a locally running Ollama model (Qwen3:8b): a lightweight desktop interface for a local AI assistant.",
+      "keywords": [
+        "React",
+        "Tauri",
+        "Ollama",
+        "Qwen3:8b"
+      ],
+      "url": "https://github.com/just-sil/hello_kitty"
+    },
+    {
+      "name": "Solar Panel Cleaner",
+      "description": "An autonomous solar-panel cleaning mechanism that keeps panels efficient and cuts manual maintenance, using motorised cleaning and embedded control.",
+      "keywords": [
+        "Robotics",
+        "Embedded control",
+        "Solar"
+      ]
+    },
+    {
+      "name": "RTSP CCTV Monitoring",
+      "description": "A multi-camera IP surveillance viewer built with Python and VLC, with RTSP streams configured for smooth simultaneous viewing.",
+      "keywords": [
+        "Python",
+        "VLC",
+        "RTSP"
+      ]
+    },
+    {
+      "name": "RankRack",
+      "description": "A ranking platform that organises marks and generates ranked results, making student performance easy to track and compare.",
+      "keywords": [
+        "Web",
+        "Python",
+        "Database"
+      ]
+    },
+    {
+      "name": "Potentiometer Radio",
+      "description": "Turning a potentiometer, read through an MCP3008 ADC, tunes between Music, AI and Standby bands like a real dial. The music band plays local tracks or streams from the Audius API through VLC; the AI band is next.",
+      "keywords": [
+        "Raspberry Pi",
+        "Python",
+        "MCP3008",
+        "Audius API"
+      ],
+      "url": "https://github.com/just-sil/the-faah-radio"
+    },
+    {
+      "name": "Kaida",
+      "description": "A pocket-sized AI chatbot with voice: talk to it naturally and have it control the smart room hands-free, from anywhere.",
+      "keywords": [
+        "AI",
+        "Voice",
+        "IoT",
+        "Portable"
+      ]
+    },
+    {
+      "name": "Kerala Drive",
+      "description": "A browser driving simulator inspired by Kerala roads, exploring a first-person WagonR cockpit, local road layouts and junctions, and traffic behaviour in real-time 3D.",
+      "keywords": [
+        "Three.js",
+        "WebGL",
+        "JavaScript"
+      ],
+      "url": "https://github.com/just-sil/kerala-drive"
+    },
+    {
+      "name": "PrintDaddy",
+      "description": "A web platform for an on-demand 3D-printing service where visitors browse, submit print jobs online and get them fabricated.",
+      "keywords": [
+        "Web",
+        "Full-stack",
+        "3D printing"
+      ]
+    },
+    {
+      "name": "Auto-Git",
+      "description": "A file-watcher that automates a Git-based file handoff, using a commit-message__filename.ext convention to keep the intended commit message separate from the filename.",
+      "keywords": [
+        "Git",
+        "Automation",
+        "File watcher"
+      ],
+      "url": "https://github.com/just-sil/auto-git"
+    },
+    {
+      "name": "3D Printing & Prototyping",
+      "description": "Designs and fabricates functional prototypes on an Anycubic Kobra 2 Neo: CAD models, PLA printing and print optimisation.",
+      "keywords": [
+        "3D printing",
+        "CAD",
+        "PLA"
+      ]
+    },
+    {
+      "name": "ESP32-C3 LED Matrix",
+      "description": "An 8×8 LED matrix driven by an ESP32-C3, with WLED set up and a Snake-style game explored for the compact display.",
+      "keywords": [
+        "ESP32-C3",
+        "LED matrix",
+        "WLED",
+        "Embedded C++"
+      ]
+    },
+    {
+      "name": "DIY Pen Plotter",
+      "description": "An exploratory pen-plotter build that turns digital drawings into physical pen movement, focused on simple motion control and reusing available components.",
+      "keywords": [
+        "Electronics",
+        "Stepper motors",
+        "Motion control"
+      ]
+    }
+  ],
+  "meta": {
+    "canonical": "https://just-sil.github.io/just_me/resume.json",
+    "version": "2026.11"
+  }
+}
